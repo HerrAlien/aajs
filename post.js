@@ -94,6 +94,20 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                 __ZN27CAACoordinateTransformation19Galactic2EquatorialEdd (0, l, b);
                 return { "X" : HEAPF64[0], "Y" : HEAPF64[1] };
             }
+        },
+        Date : {
+            DateToJD : function (Year, Month, Day, bGregorianCalendar) {
+                return __ZN7CAADate8DateToJDElldb (Year, Month, Day, bGregorianCalendar);
+            },
+            IsLeap : function (Year, bGregorianCalendar) {
+                return __ZN7CAADate6IsLeapElb (Year, bGregorianCalendar);
+            },
+            DayOfYearToDayAndMonth : function (DayOfYear, bLeap) {
+                __ZN7CAADate22DayOfYearToDayAndMonthElbRlS0_(DayOfYear, bLeap, 0, 4);
+                return { "DayOfMonth" : HEAP32[0], "Month" : HEAP32[1] };
+            }
+        // ^^ tested ^^
+        // vv needs testing vv
         }
     };
 })();
