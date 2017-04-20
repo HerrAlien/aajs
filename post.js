@@ -15,14 +15,7 @@ PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License along
 with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
 
-    return {
-        Easter : {
-            Calculate : function (year, gregorian) {
-                __ZN9CAAEaster9CalculateElb(0, year, gregorian);
-                return  {"month" : HEAP32[0], "day" : HEAP32[1]};
-            }
-        },
-        
+    return {        
         Aberration : {
             EarthVelocity : function (JD, bHighPrecision) {
                 __ZN13CAAAberration13EarthVelocityEdb(0, JD, bHighPrecision);
@@ -133,6 +126,13 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                 return __ZN7CAADate11DaysInMonthElb (Month, bLeapYear);
             }
 
-        }
+        },
+        Easter : {
+            Calculate : function (year, gregorian) {
+                __ZN9CAAEaster9CalculateElb(0, year, gregorian);
+                return  {"month" : HEAP32[0], "day" : HEAP32[1]};
+            }
+        },
+
     };
 })();
