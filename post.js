@@ -63,6 +63,22 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             ApparentEccentricity : function (e, i, w) {
                 return __ZN13CAABinaryStar20ApparentEccentricityEddd(e, i, w);
             }
+        },
+        CoordinateTransformation : {
+            Equatorial2Ecliptic : function (alpha, delta, epsilon) {
+                __ZN27CAACoordinateTransformation19Equatorial2EclipticEddd (0, alpha, delta, epsilon);
+                return { "X" : HEAPF64[0], "Y" : HEAPF64[1] };
+            },
+            
+            Ecliptic2Equatorial: function (lambda, beta, epsilon) {
+                __ZN27CAACoordinateTransformation19Ecliptic2EquatorialEddd (0, lambda, beta, epsilon);
+                return { "X" : HEAPF64[0], "Y" : HEAPF64[1] };
+            },
+            
+            Equatorial2Horizontal : function (localHourAngle, delta, latitude){
+                __ZN27CAACoordinateTransformation21Equatorial2HorizontalEddd (0, localHourAngle, delta, latitude);
+                return { "X" : HEAPF64[0], "Y" : HEAPF64[1] };
+            }
         }
     };
 })();
