@@ -4,12 +4,18 @@
 </head>
 <body>
 
-<span id="out"></span>
+<pre id="out"></pre>
 
 <script type="text/javascript">
 
 
-    document.getElementById ("out").textContent = JSON.stringify(AAJS.Aberration.EquatorialAberration(10,20,2457863.6967934375, true));
+    document.getElementById ("out").textContent = 
+        JSON.stringify(AAJS.AngularSeparation.Separation(10,11,12,13)) + "\n" +
+        JSON.stringify(AAJS.AngularSeparation.PositionAngle(10,11,12,13)) + "\n" + 
+        JSON.stringify(AAJS.AngularSeparation.DistanceFromGreatArc(10,11,12,13,14,15)) + "\n" +
+        JSON.stringify(AAJS.AngularSeparation.SmallestCircle(10,11,12,13,14,15, true)) + "\n" + 
+        JSON.stringify(AAJS.AngularSeparation.SmallestCircle(10,11,12,13,14,15, false)) + "\n"
+        ;
 
 </script>
 
