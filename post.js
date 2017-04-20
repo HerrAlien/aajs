@@ -16,8 +16,12 @@
         EclipticAberration : function (lambda, beta, JD, bHighPrecision) {
             __ZN13CAAAberration18EclipticAberrationEdddb (0, lambda, beta, JD, bHighPrecision);
             return {"X" : HEAPF64[0], "Y" : HEAPF64[1]};
-        }
+        },
         
+        EquatorialAberration: function (alpha, delta, JD, bHighPrecision) {
+            __ZN13CAAAberration20EquatorialAberrationEdddb (0, alpha, delta, JD, bHighPrecision);
+            return {"X" : HEAPF64[0], "Y" : HEAPF64[1]};
+        }
     };
 
     return aajs;
