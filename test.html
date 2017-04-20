@@ -10,11 +10,9 @@
 
     
     document.getElementById ("out").textContent = 
-        JSON.stringify(AAJS.Date.DayOfYearToDayAndMonth (256,true))
+        JSON.stringify(AAJS.Date.JulianToGregorian(2016, 1, 2))
         + "\n" 
-        + JSON.stringify(AAJS.Date.IsLeap (2016, true))
-        + "\n" 
-        + JSON.stringify(AAJS.Date.DateToJD (2016, 1, 1, true))
+        
         ;
 
 </script>

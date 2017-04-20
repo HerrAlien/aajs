@@ -105,9 +105,13 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             DayOfYearToDayAndMonth : function (DayOfYear, bLeap) {
                 __ZN7CAADate22DayOfYearToDayAndMonthElbRlS0_(DayOfYear, bLeap, 0, 4);
                 return { "DayOfMonth" : HEAP32[0], "Month" : HEAP32[1] };
-            }
+            },
         // ^^ tested ^^
         // vv needs testing vv
+            JulianToGregorian : function (year, month, day) {
+                __ZN7CAADate17JulianToGregorianElll(0, year, month, day);
+                return {"Year" : HEAP32[0], "Month" : HEAP32[1], "Day" : HEAP32[2]};
+            }
         }
     };
 })();
