@@ -10,16 +10,17 @@
 
     
     document.getElementById ("out").textContent = ""
-        + JSON.stringify(AAJS.Date.INT(2016.123))
-        + "\n" 
-        + JSON.stringify(AAJS.Date.AfterPapalReform(2016, 1, 2))
-        + "\n" 
-        + JSON.stringify(AAJS.Date.AfterPapalReform(AAJS.Date.DateToJD(2016, 1, 2)))
+        
+        + JSON.stringify(AAJS.Date.DayOfYear(AAJS.Date.DateToJD(2016, 1, 2, true), 2016, true))
         + "\n" 
        
-        + JSON.stringify(AAJS.Date.AfterPapalReform(123, 1, 2))
+        + JSON.stringify(AAJS.Date.DaysInMonth(1, true))
         + "\n" 
-        + JSON.stringify(AAJS.Date.AfterPapalReform(AAJS.Date.DateToJD(123, 1, 2)))
+        + JSON.stringify(AAJS.Date.DaysInMonth(1, false))
+        + "\n" 
+        + JSON.stringify(AAJS.Date.DaysInMonth(2, true))
+        + "\n" 
+        + JSON.stringify(AAJS.Date.DaysInMonth(2, false))
         + "\n" 
 
         ;
