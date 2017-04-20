@@ -9,10 +9,19 @@
 <script type="text/javascript">
 
     
-    document.getElementById ("out").textContent = 
-        JSON.stringify(AAJS.Date.GregorianToJulian(2016, 1, 2))
+    document.getElementById ("out").textContent = ""
+        + JSON.stringify(AAJS.Date.INT(2016.123))
         + "\n" 
-        
+        + JSON.stringify(AAJS.Date.AfterPapalReform(2016, 1, 2))
+        + "\n" 
+        + JSON.stringify(AAJS.Date.AfterPapalReform(AAJS.Date.DateToJD(2016, 1, 2)))
+        + "\n" 
+       
+        + JSON.stringify(AAJS.Date.AfterPapalReform(123, 1, 2))
+        + "\n" 
+        + JSON.stringify(AAJS.Date.AfterPapalReform(AAJS.Date.DateToJD(123, 1, 2)))
+        + "\n" 
+
         ;
 
 </script>

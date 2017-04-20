@@ -113,6 +113,16 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             GregorianToJulian : function (year, month, day) {
                 __ZN7CAADate17GregorianToJulianElll(0, year, month, day);
                 return {"Year" : HEAP32[0], "Month" : HEAP32[1], "Day" : HEAP32[2]};
+            },
+            INT : function (doubleValue) {
+                return __ZN7CAADate3INTEd (doubleValue);
+            },
+
+            AfterPapalReform : function (JD_orYear, Month, Day) {
+                if (Month === undefined && Day === undefined)
+                    return __ZN7CAADate16AfterPapalReformEd(JD_orYear);
+                else 
+                    return __ZN7CAADate16AfterPapalReformElld(JD_orYear, Month ¦ 0 , Day ¦ 0);
             }
 
         }
