@@ -122,7 +122,7 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                 if (Month === undefined && Day === undefined)
                     return __ZN7CAADate16AfterPapalReformEd(JD_orYear);
                 else 
-                    return __ZN7CAADate16AfterPapalReformElld(JD_orYear, Month ¦ 0 , Day ¦ 0);
+                    return __ZN7CAADate16AfterPapalReformElld(JD_orYear, Month, Day);
             }
 
         }
