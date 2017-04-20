@@ -123,6 +123,14 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                     return __ZN7CAADate16AfterPapalReformEd(JD_orYear);
                 else 
                     return __ZN7CAADate16AfterPapalReformElld(JD_orYear, Month, Day);
+            },
+            
+            DayOfYear : function (JD, year, bGregorianCalendar) {
+                return __ZN7CAADate9DayOfYearEdlb(JD, year, bGregorianCalendar);
+            },
+            
+            DaysInMonth : function (Month, bLeapYear) {
+                return __ZN7CAADate11DaysInMonthElb (Month, bLeapYear);
             }
 
         }
