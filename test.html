@@ -3,17 +3,13 @@
     <script type="text/javascript" src="aajs.js"></script>
 </head>
 <body>
-<label> year <input type="number" id="year" value="2017"></input></label>
-<input type="button" value=" Easter " id="compute"></input>
+
 <span id="out"></span>
 
 <script type="text/javascript">
 
-document.getElementById("compute").onclick = function () {
 
-    var easter = AAJS.EasterCalculate(document.getElementById("year").value, true);
-    document.getElementById ("out").textContent = document.getElementById("year").value + "-" + easter.month + "-" + easter.day;
-}
+    document.getElementById ("out").textContent = JSON.stringify(AAJS.Aberration.EarthVelocity(2457863.6967934375, true));
 
 </script>
 
