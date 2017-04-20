@@ -11,6 +11,11 @@
         EarthVelocity : function (JD, bHighPrecision) {
             __ZN13CAAAberration13EarthVelocityEdb(0, JD, bHighPrecision);
             return {"X" : HEAPF64[0], "Y" : HEAPF64[1], "Z" : HEAPF64[2]};
+        },
+        
+        EclipticAberration : function (lambda, beta, JD, bHighPrecision) {
+            __ZN13CAAAberration18EclipticAberrationEdddb (0, lambda, beta, JD, bHighPrecision);
+            return {"X" : HEAPF64[0], "Y" : HEAPF64[1]};
         }
         
     };
