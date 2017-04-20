@@ -53,6 +53,16 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             SmallestCircle : function (Alpha1, Delta1, Alpha2, Delta2, Alpha3, Delta3, bType1){
                 return __ZN20CAAAngularSeparation14SmallestCircleEddddddRb(Alpha1, Delta1, Alpha2, Delta2, Alpha3, Delta3, bType1);
             }
+        },
+        
+        BinaryStar : {
+            Calculate : function ( t,  P,  T,  e,  a,  i,  omega,  w) {
+                __ZN13CAABinaryStar9CalculateEdddddddd(0, t,  P,  T,  e,  a,  i,  omega,  w);
+                return { "r" : HEAPF64[0], "Theta" : HEAPF64[1], "Rho": HEAPF64[2] };
+            },
+            ApparentEccentricity : function (e, i, w) {
+                return __ZN13CAABinaryStar20ApparentEccentricityEddd(e, i, w);
+            }
         }
     };
 })();

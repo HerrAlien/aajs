@@ -10,11 +10,7 @@
 
 
     document.getElementById ("out").textContent = 
-        JSON.stringify(AAJS.AngularSeparation.Separation(10,11,12,13)) + "\n" +
-        JSON.stringify(AAJS.AngularSeparation.PositionAngle(10,11,12,13)) + "\n" + 
-        JSON.stringify(AAJS.AngularSeparation.DistanceFromGreatArc(10,11,12,13,14,15)) + "\n" +
-        JSON.stringify(AAJS.AngularSeparation.SmallestCircle(10,11,12,13,14,15, true)) + "\n" + 
-        JSON.stringify(AAJS.AngularSeparation.SmallestCircle(10,11,12,13,14,15, false)) + "\n"
+        JSON.stringify(AAJS.BinaryStar.Calculate(11, 12, 13, 0.5, 14, 0.5, 0.5, 0.5)) + "\n" 
         ;
 
 </script>
