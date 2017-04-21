@@ -133,6 +133,84 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                 return  {"month" : HEAP32[0], "day" : HEAP32[1]};
             }
         },
-
+        
+        Diameters : {
+            SunSemidiameterA : function (distanceAU) {
+                return __ZN12CAADiameters16SunSemidiameterAEd (distanceAU);
+            },
+            MercurySemidiameterA : function (distanceAU) {
+                return __ZN12CAADiameters20MercurySemidiameterAEd (distanceAU);
+            },
+            VenusSemidiameterA : function (distanceAU) {
+                return __ZN12CAADiameters18VenusSemidiameterAEd (distanceAU);
+            },
+            MarsSemidiameterA : function (distanceAU) {
+                return __ZN12CAADiameters17MarsSemidiameterAEd (distanceAU);
+            },
+            JupiterEquatorialSemidiameterA : function (distanceAU) {
+                return __ZN12CAADiameters30JupiterEquatorialSemidiameterAEd (distanceAU);
+            },
+            JupiterPolarSemidiameterA : function (distanceAU) {
+                return __ZN12CAADiameters25JupiterPolarSemidiameterAEd (distanceAU);
+            },
+            SaturnEquatorialSemidiameterA : function (distanceAU) {
+                return __ZN12CAADiameters29SaturnEquatorialSemidiameterAEd (distanceAU);
+            },
+            SaturnPolarSemidiameterA : function (distanceAU) {
+                return __ZN12CAADiameters24SaturnPolarSemidiameterAEd (distanceAU);
+            },
+            ApparentSaturnPolarSemidiameterA : function (Delta, B) {
+                return __ZN12CAADiameters32ApparentSaturnPolarSemidiameterAEdd (Delta, B);
+            },
+            UranusSemidiameterA : function (distanceAU) {
+                return __ZN12CAADiameters19UranusSemidiameterAEd (distanceAU);
+            },
+            NeptuneSemidiameterA : function (distanceAU) {
+                return __ZN12CAADiameters20NeptuneSemidiameterAEd (distanceAU);
+            },
+            MercurySemidiameterB : function (distanceAU) {
+                return __ZN12CAADiameters20MercurySemidiameterBEd (distanceAU);
+            },
+            VenusSemidiameterB : function (distanceAU) {
+                return __ZN12CAADiameters18VenusSemidiameterBEd (distanceAU);
+            },
+            MarsSemidiameterB : function (distanceAU) {
+                return __ZN12CAADiameters17MarsSemidiameterBEd (distanceAU);
+            },
+            JupiterEquatorialSemidiameterB : function (distanceAU) {
+                return __ZN12CAADiameters30JupiterEquatorialSemidiameterBEd (distanceAU);
+            },
+            JupiterPolarSemidiameterB : function (distanceAU) {
+                return __ZN12CAADiameters25JupiterPolarSemidiameterBEd (distanceAU);
+            },
+            SaturnEquatorialSemidiameterB : function (distanceAU) {
+                return __ZN12CAADiameters29SaturnEquatorialSemidiameterBEd (distanceAU);
+            },
+            SaturnPolarSemidiameterB : function (distanceAU) {
+                return __ZN12CAADiameters24SaturnPolarSemidiameterBEd (distanceAU);
+            },
+            ApparentSaturnPolarSemidiameterB : function (Delta, B) {
+                return __ZN12CAADiameters32ApparentSaturnPolarSemidiameterBEdd (Delta, B);
+            },
+            UranusSemidiameterB : function (distanceAU) {
+                return __ZN12CAADiameters19UranusSemidiameterBEd (distanceAU);
+            },
+            NeptuneSemidiameterB : function (distanceAU) {
+                return __ZN12CAADiameters20NeptuneSemidiameterBEd (distanceAU);
+            },
+            GeocentricMoonSemidiameter : function (distance) {
+                return __ZN12CAADiameters26GeocentricMoonSemidiameterEd (distance);
+            },
+            TopocentricMoonSemidiameter : function (distanceDelta, delta, longitude, latitide, height){
+                return __ZN12CAADiameters27TopocentricMoonSemidiameterEddddd(distanceDelta, delta, longitude, latitide, height)
+            },
+            // this one is weird
+            AsteroidDiameter : function (H, A) {
+                return __ZN12CAADiameters16AsteroidDiameterEdd (H, A);
+            },
+            ApparentAsteroidDiameter : function (distance, size) {
+                return __ZN12CAADiameters24ApparentAsteroidDiameterEdd (distance, size);
+            }
+        }
     };
 })();
