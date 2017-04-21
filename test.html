@@ -8,61 +8,28 @@
 
 <script type="text/javascript">
 
-    
+    var jd = AAJS.Date.DateToJD (2017,1,1, true);
     document.getElementById ("out").textContent = ""
         
-        + JSON.stringify(AAJS.Diameters.SunSemidiameterA(1))
+        + JSON.stringify(AAJS.DynamicalTime.DeltaT(jd))
+        + "\n" 
+        + JSON.stringify(AAJS.DynamicalTime.CumulativeLeapSeconds(jd))
+        + "\n" 
+        + JSON.stringify(AAJS.DynamicalTime.TT2UTC(jd))
+        + "\n" 
+        + JSON.stringify(AAJS.DynamicalTime.UTC2TT(jd))
+        + "\n" 
+        + JSON.stringify(AAJS.DynamicalTime.TT2TAI(jd))
+        + "\n" 
+        + JSON.stringify(AAJS.DynamicalTime.TAI2TT(jd))
+        + "\n" 
+        + JSON.stringify(AAJS.DynamicalTime.TT2UT1(jd))
+        + "\n" 
+        + JSON.stringify(AAJS.DynamicalTime.UT12TT(jd))
+        + "\n" 
+        + JSON.stringify(AAJS.DynamicalTime.UT1MinusUTC(jd))
         + "\n" 
        
-        + JSON.stringify(AAJS.Diameters.MercurySemidiameterA(1))
-        + "\n" 
-        + JSON.stringify(AAJS.Diameters.VenusSemidiameterA(1))
-        + "\n" 
-        + JSON.stringify(AAJS.Diameters.MarsSemidiameterA(1))
-        + "\n" 
-        + JSON.stringify(AAJS.Diameters.JupiterEquatorialSemidiameterA(1))
-        + "\n" 
-        + JSON.stringify(AAJS.Diameters.JupiterPolarSemidiameterA(1))
-        + "\n" 
-        + JSON.stringify(AAJS.Diameters.SaturnEquatorialSemidiameterA(1))
-        + "\n" 
-        + JSON.stringify(AAJS.Diameters.SaturnPolarSemidiameterA(1))
-        + "\n" 
-        + JSON.stringify(AAJS.Diameters.ApparentSaturnPolarSemidiameterA(1, 1))
-        + "\n" 
-        + JSON.stringify(AAJS.Diameters.UranusSemidiameterA(1))
-        + "\n" 
-        + JSON.stringify(AAJS.Diameters.NeptuneSemidiameterA(1))
-        + "\n" 
-        + JSON.stringify(AAJS.Diameters.MercurySemidiameterB(1))
-        + "\n" 
-        + JSON.stringify(AAJS.Diameters.VenusSemidiameterB(1))
-        + "\n" 
-        + JSON.stringify(AAJS.Diameters.MarsSemidiameterB(1))
-        + "\n" 
-        + JSON.stringify(AAJS.Diameters.JupiterEquatorialSemidiameterB(1))
-        + "\n" 
-        + JSON.stringify(AAJS.Diameters.JupiterPolarSemidiameterB(1))
-        + "\n" 
-
-        + JSON.stringify(AAJS.Diameters.SaturnEquatorialSemidiameterB(1))
-        + "\n" 
-        + JSON.stringify(AAJS.Diameters.SaturnPolarSemidiameterB(1))
-        + "\n" 
-        + JSON.stringify(AAJS.Diameters.ApparentSaturnPolarSemidiameterB(1, 1))
-        + "\n" 
-        + JSON.stringify(AAJS.Diameters.UranusSemidiameterB(1))
-        + "\n" 
-        + JSON.stringify(AAJS.Diameters.NeptuneSemidiameterB(1))
-        + "\n" 
-        + JSON.stringify(AAJS.Diameters.GeocentricMoonSemidiameter(1))
-        + "\n" 
-        + JSON.stringify(AAJS.Diameters.TopocentricMoonSemidiameter(1, 0.1, 23, 45, 1))
-        + "\n" 
-        + JSON.stringify(AAJS.Diameters.AsteroidDiameter(1, 0.1))
-        + "\n" 
-        + JSON.stringify(AAJS.Diameters.ApparentAsteroidDiameter(1, 0.1))
-        + "\n" 
         ;
 
 </script>
