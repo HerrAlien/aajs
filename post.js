@@ -211,6 +211,22 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             ApparentAsteroidDiameter : function (distance, size) {
                 return __ZN12CAADiameters24ApparentAsteroidDiameterEdd (distance, size);
             }
+        },
+        
+        // not yet tested
+        DynamicalTime : {
+                DeltaT : function (JD) { return __ZN16CAADynamicalTime6DeltaTEd (JD); },
+                CumulativeLeapSeconds : function (JD) { 
+                    return  __ZN16CAADynamicalTime21CumulativeLeapSecondsEd (JD); 
+                },
+                TT2UTC : function (JD) { return __ZN16CAADynamicalTime6TT2UTCEd(JD); },
+                UTC2TT : function (JD) { return __ZN16CAADynamicalTime6UTC2TTEd(JD); },
+                TT2TAI : function (JD) { return __ZN16CAADynamicalTime6TT2TAIEd(JD); },
+                TAI2TT : function (JD) { return __ZN16CAADynamicalTime6TAI2TTEd(JD); },
+                TT2UT1 : function (JD) { return __ZN16CAADynamicalTime6TT2UT1Ed(JD); },
+                UT12TT : function (JD) { return __ZN16CAADynamicalTime6UT12TTEd(JD); },
+                UT1MinusUTC : function (JD) { return __ZN16CAADynamicalTime11UT1MinusUTCEd(JD); }
+            
         }
     };
 })();
