@@ -213,7 +213,6 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             }
         },
         
-        // not yet tested
         DynamicalTime : {
                 DeltaT : function (JD) { return __ZN16CAADynamicalTime6DeltaTEd (JD); },
                 CumulativeLeapSeconds : function (JD) { 
@@ -226,6 +225,31 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                 TT2UT1 : function (JD) { return __ZN16CAADynamicalTime6TT2UT1Ed(JD); },
                 UT12TT : function (JD) { return __ZN16CAADynamicalTime6UT12TTEd(JD); },
                 UT1MinusUTC : function (JD) { return __ZN16CAADynamicalTime11UT1MinusUTCEd(JD); }
+            
+        },
+        
+        Earth : {
+            EclipticLongitude : function (jd, highPrecision) {
+                return __ZN8CAAEarth17EclipticLongitudeEdb (jd, highPrecision);
+            },
+            EclipticLatitude : function (jd, highPrecision) {
+                return __ZN8CAAEarth16EclipticLatitudeEdb (jd, highPrecision);
+            },
+            RadiusVector : function (jd, highPrecision) {
+                return __ZN8CAAEarth12RadiusVectorEdb (jd, highPrecision);
+            },
+            SunMeanAnomaly : function (jd) {
+                return __ZN8CAAEarth14SunMeanAnomalyEd (jd);
+            },
+            Eccentricity : function (jd) {
+                return __ZN8CAAEarth12EccentricityEd (jd);
+            },
+            EclipticLongitudeJ2000 : function (jd, highPrecision) {
+                return __ZN8CAAEarth22EclipticLongitudeJ2000Edb (jd, highPrecision);
+            },
+            EclipticLatitudeJ2000 : function (jd, highPrecision) {
+                return __ZN8CAAEarth21EclipticLatitudeJ2000Edb (jd, highPrecision);
+            },
             
         }
     };

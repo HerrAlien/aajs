@@ -11,23 +11,29 @@
     var jd = AAJS.Date.DateToJD (2017,1,1, true);
     document.getElementById ("out").textContent = ""
         
-        + JSON.stringify(AAJS.DynamicalTime.DeltaT(jd))
+        + JSON.stringify(AAJS.Earth.EclipticLongitude(jd, true))
         + "\n" 
-        + JSON.stringify(AAJS.DynamicalTime.CumulativeLeapSeconds(jd))
+        + JSON.stringify(AAJS.Earth.EclipticLongitude(jd, false))
         + "\n" 
-        + JSON.stringify(AAJS.DynamicalTime.TT2UTC(jd))
+        + JSON.stringify(AAJS.Earth.EclipticLatitude(jd, true))
         + "\n" 
-        + JSON.stringify(AAJS.DynamicalTime.UTC2TT(jd))
+        + JSON.stringify(AAJS.Earth.EclipticLatitude(jd, false))
         + "\n" 
-        + JSON.stringify(AAJS.DynamicalTime.TT2TAI(jd))
+        + JSON.stringify(AAJS.Earth.RadiusVector(jd, true))
         + "\n" 
-        + JSON.stringify(AAJS.DynamicalTime.TAI2TT(jd))
+        + JSON.stringify(AAJS.Earth.RadiusVector(jd, false))
         + "\n" 
-        + JSON.stringify(AAJS.DynamicalTime.TT2UT1(jd))
+        + JSON.stringify(AAJS.Earth.SunMeanAnomaly(jd))
         + "\n" 
-        + JSON.stringify(AAJS.DynamicalTime.UT12TT(jd))
+        + JSON.stringify(AAJS.Earth.Eccentricity(jd))
         + "\n" 
-        + JSON.stringify(AAJS.DynamicalTime.UT1MinusUTC(jd))
+        + JSON.stringify(AAJS.Earth.EclipticLongitudeJ2000(jd, true))
+        + "\n" 
+        + JSON.stringify(AAJS.Earth.EclipticLongitudeJ2000(jd, false))
+        + "\n" 
+        + JSON.stringify(AAJS.Earth.EclipticLatitudeJ2000(jd, true))
+        + "\n" 
+        + JSON.stringify(AAJS.Earth.EclipticLatitudeJ2000(jd, false))
         + "\n" 
        
         ;
