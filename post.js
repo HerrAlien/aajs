@@ -389,19 +389,43 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                     return __ZN25CAAElementsPlanetaryOrbit25SaturnLongitudePerihelionEd(JD);
                 },
 
-                UranusMeanLongitude: function (JD) { },
-                UranusSemimajorAxis: function (JD) { },
-                UranusEccentricity: function (JD) { },
-                UranusInclination: function (JD) { },
-                UranusLongitudeAscendingNode: function (JD) { },
-                UranusLongitudePerihelion: function (JD) { },
+                UranusMeanLongitude: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit19UranusMeanLongitudeEd(JD);
+                },
+                UranusSemimajorAxis: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit19UranusSemimajorAxisEd(JD);
+                },
+                UranusEccentricity: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit18UranusEccentricityEd(JD);
+                },
+                UranusInclination: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit17UranusInclinationEd(JD);
+                },
+                UranusLongitudeAscendingNode: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit28UranusLongitudeAscendingNodeEd(JD);
+                },
+                UranusLongitudePerihelion: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit25UranusLongitudePerihelionEd(JD);
+                },
 
-                NeptuneMeanLongitude: function (JD) { },
-                NeptuneSemimajorAxis: function (JD) { },
-                NeptuneEccentricity: function (JD) { },
-                NeptuneInclination: function (JD) { },
-                NeptuneLongitudeAscendingNode: function (JD) { },
-                NeptuneLongitudePerihelion: function (JD) { },
+                NeptuneMeanLongitude: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit20NeptuneMeanLongitudeEd(JD);
+                },
+                NeptuneSemimajorAxis: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit20NeptuneSemimajorAxisEd(JD);
+                },
+                NeptuneEccentricity: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit19NeptuneEccentricityEd(JD);
+                },
+                NeptuneInclination: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit18NeptuneInclinationEd (JD);
+                },
+                NeptuneLongitudeAscendingNode: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit29NeptuneLongitudeAscendingNodeEd(JD);
+                },
+                NeptuneLongitudePerihelion: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit26NeptuneLongitudePerihelionEd (JD);
+                },
 
                 MercuryMeanLongitudeJ2000: function (JD) { },
                 MercuryInclinationJ2000: function (JD) { },
