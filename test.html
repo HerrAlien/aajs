@@ -11,29 +11,9 @@
     var jd = AAJS.Date.DateToJD (2017,1,1, true);
     document.getElementById ("out").textContent = ""
         
-        + JSON.stringify(AAJS.Earth.EclipticLongitude(jd, true))
+        + JSON.stringify(AAJS.Eclipses.CalculateSolar(-82))
         + "\n" 
-        + JSON.stringify(AAJS.Earth.EclipticLongitude(jd, false))
-        + "\n" 
-        + JSON.stringify(AAJS.Earth.EclipticLatitude(jd, true))
-        + "\n" 
-        + JSON.stringify(AAJS.Earth.EclipticLatitude(jd, false))
-        + "\n" 
-        + JSON.stringify(AAJS.Earth.RadiusVector(jd, true))
-        + "\n" 
-        + JSON.stringify(AAJS.Earth.RadiusVector(jd, false))
-        + "\n" 
-        + JSON.stringify(AAJS.Earth.SunMeanAnomaly(jd))
-        + "\n" 
-        + JSON.stringify(AAJS.Earth.Eccentricity(jd))
-        + "\n" 
-        + JSON.stringify(AAJS.Earth.EclipticLongitudeJ2000(jd, true))
-        + "\n" 
-        + JSON.stringify(AAJS.Earth.EclipticLongitudeJ2000(jd, false))
-        + "\n" 
-        + JSON.stringify(AAJS.Earth.EclipticLatitudeJ2000(jd, true))
-        + "\n" 
-        + JSON.stringify(AAJS.Earth.EclipticLatitudeJ2000(jd, false))
+        + JSON.stringify(AAJS.Eclipses.CalculateSolar(118))
         + "\n" 
        
         ;

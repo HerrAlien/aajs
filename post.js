@@ -127,12 +127,6 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             }
 
         },
-        Easter : {
-            Calculate : function (year, gregorian) {
-                __ZN9CAAEaster9CalculateElb(0, year, gregorian);
-                return  {"month" : HEAP32[0], "day" : HEAP32[1]};
-            }
-        },
         
         Diameters : {
             SunSemidiameterA : function (distanceAU) {
@@ -249,8 +243,25 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             },
             EclipticLatitudeJ2000 : function (jd, highPrecision) {
                 return __ZN8CAAEarth21EclipticLatitudeJ2000Edb (jd, highPrecision);
+            }
+        },
+        Easter : {
+            Calculate : function (year, gregorian) {
+                __ZN9CAAEaster9CalculateElb(0, year, gregorian);
+                return  {"month" : HEAP32[0], "day" : HEAP32[1]};
+            }
+        },
+        Eclipses : {
+            CalculateSolar : function (k) {
+                __ZN11CAAEclipses14CalculateSolarEd (0, k);
+                return {"flags" : HEAP32[0], "gamma" : HEAPF64[4], "GreatestMagnitude" : HEAPF64[5], "F" : HEAPF64[2], "u" : HEAPF64[3], "JdOfMaimumEclipse" : HEAPF64[1],
+                "isTotal" : (HEAP32[0] & 0x01) > 0, "isAnnular" : (HEAP32[0] & 0x02) > 0, "isAnnularTotal" : (HEAP32[0] & 0x04) > 0, "isCentral" : (HEAP32[0] & 0x08) > 0,
+                "isPartial" : (HEAP32[0] & 0x10) > 0, "isNonCentral" : (HEAP32[0] & 0x20) > 0 };
             },
             
+            CalculateLunar : function (k) {
+                
+            }
         }
     };
 })();
