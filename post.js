@@ -316,18 +316,40 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                     return __ZN25CAAElementsPlanetaryOrbit24VenusLongitudePerihelionEd (JD);
                 },
 
-                EarthMeanLongitude: function (JD) { },
-                EarthSemimajorAxis: function (JD) { },
-                EarthEccentricity: function (JD) { },
-                EarthInclination: function (JD) { },
-                EarthLongitudePerihelion: function (JD) { },
+                EarthMeanLongitude: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit18EarthMeanLongitudeEd (JD);
+                },
+                EarthSemimajorAxis: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit18EarthSemimajorAxisEd (JD);
+                },
+                EarthEccentricity: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit17EarthEccentricityEd (JD);
+                },
+                EarthInclination: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit16EarthInclinationEd (JD);
+                },
+                EarthLongitudePerihelion: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit24EarthLongitudePerihelionEd(JD);
+                },
 
-                MarsMeanLongitude: function (JD) { },
-                MarsSemimajorAxis: function (JD) { },
-                MarsEccentricity: function (JD) { },
-                MarsInclination: function (JD) { },
-                MarsLongitudeAscendingNode: function (JD) { },
-                MarsLongitudePerihelion: function (JD) { },
+                MarsMeanLongitude: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit17MarsMeanLongitudeEd(JD);
+                },
+                MarsSemimajorAxis: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit17MarsSemimajorAxisEd(JD);
+                },
+                MarsEccentricity: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit16MarsEccentricityEd(JD);
+                },
+                MarsInclination: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit15MarsInclinationEd(JD);
+                },
+                MarsLongitudeAscendingNode: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit26MarsLongitudeAscendingNodeEd(JD);
+                },
+                MarsLongitudePerihelion: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit23MarsLongitudePerihelionEd(JD);
+                },
 
                 JupiterMeanLongitude: function (JD) { },
                 JupiterSemimajorAxis: function (JD) { },
