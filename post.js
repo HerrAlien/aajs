@@ -260,7 +260,11 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             },
             
             CalculateLunar : function (k) {
-                
+                __ZN11CAAEclipses14CalculateLunarEd(0, k);
+                return {"bEclipse" : HEAP32[0], "JdOfMaximumEclipse": HEAPF64[1], "F" : HEAPF64[2], "u" : HEAPF64[3], "gamma" : HEAPF64[4], "PenumbralRadii" : HEAPF64[5],
+                "UmbralRadii" : HEAPF64[6], "PenumbralMagnitude" : HEAPF64[7], "UmbralMagnitude" : HEAPF64[8],
+                "PartialPhaseSemiDuration" : HEAPF64[9], "TotalPhaseSemiDuration" : HEAPF64[10],
+                "PartialPhasePenumbraSemiDuration" : HEAPF64[11]};
             }
         }
     };
