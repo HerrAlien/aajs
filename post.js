@@ -351,19 +351,43 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                     return __ZN25CAAElementsPlanetaryOrbit23MarsLongitudePerihelionEd(JD);
                 },
 
-                JupiterMeanLongitude: function (JD) { },
-                JupiterSemimajorAxis: function (JD) { },
-                JupiterEccentricity: function (JD) { },
-                JupiterInclination: function (JD) { },
-                JupiterLongitudeAscendingNode: function (JD) { },
-                JupiterLongitudePerihelion: function (JD) { },
+                JupiterMeanLongitude: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit20JupiterMeanLongitudeEd (JD);
+                },
+                JupiterSemimajorAxis: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit20JupiterSemimajorAxisEd(JD);
+                },
+                JupiterEccentricity: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit19JupiterEccentricityEd (JD);
+                },
+                JupiterInclination: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit18JupiterInclinationEd(JD);
+                },
+                JupiterLongitudeAscendingNode: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit29JupiterLongitudeAscendingNodeEd(JD);
+                },
+                JupiterLongitudePerihelion: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit26JupiterLongitudePerihelionEd (JD);
+                },
 
-                SaturnMeanLongitude: function (JD) { },
-                SaturnSemimajorAxis: function (JD) { },
-                SaturnEccentricity: function (JD) { },
-                SaturnInclination: function (JD) { },
-                SaturnLongitudeAscendingNode: function (JD) { },
-                SaturnLongitudePerihelion: function (JD) { },
+                SaturnMeanLongitude: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit19SaturnMeanLongitudeEd (JD);
+                },
+                SaturnSemimajorAxis: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit19SaturnSemimajorAxisEd (JD);
+                },
+                SaturnEccentricity: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit18SaturnEccentricityEd (JD);
+                },
+                SaturnInclination: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit17SaturnInclinationEd (JD);
+                },
+                SaturnLongitudeAscendingNode: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit28SaturnLongitudeAscendingNodeEd (JD);
+                },
+                SaturnLongitudePerihelion: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit25SaturnLongitudePerihelionEd(JD);
+                },
 
                 UranusMeanLongitude: function (JD) { },
                 UranusSemimajorAxis: function (JD) { },
