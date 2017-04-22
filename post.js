@@ -266,6 +266,16 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                 "PartialPhaseSemiDuration" : HEAPF64[9], "TotalPhaseSemiDuration" : HEAPF64[10],
                 "PartialPhasePenumbraSemiDuration" : HEAPF64[11]};
             }
+        },
+        EclipticalElements : {
+            Calculate : function ( i0,  w0,  omega0,  JD0,  JD) {
+                __ZN21CAAEclipticalElements9CalculateEddddd (0, i0,  w0,  omega0,  JD0,  JD);
+                return {"i" : HEAPF64[0], "w" : HEAPF64[1], "omega" : HEAPF64[2]};
+            },
+            FK4B1950ToFK5J2000 : function ( i0,  w0,  omega0) {
+                __ZN21CAAEclipticalElements18FK4B1950ToFK5J2000Eddd (0, i0,  w0,  omega0);
+                return {"i" : HEAPF64[0], "w" : HEAPF64[1], "omega" : HEAPF64[2]};
+            }
         }
     };
 })();
