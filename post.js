@@ -427,15 +427,31 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                     return __ZN25CAAElementsPlanetaryOrbit26NeptuneLongitudePerihelionEd (JD);
                 },
 
-                MercuryMeanLongitudeJ2000: function (JD) { },
-                MercuryInclinationJ2000: function (JD) { },
-                MercuryLongitudeAscendingNodeJ2000: function (JD) { },
-                MercuryLongitudePerihelionJ2000: function (JD) { },
+                MercuryMeanLongitudeJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit25MercuryMeanLongitudeJ2000Ed(JD);
+                },
+                MercuryInclinationJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit23MercuryInclinationJ2000Ed(JD);
+                },
+                MercuryLongitudeAscendingNodeJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit34MercuryLongitudeAscendingNodeJ2000Ed(JD);
+                },
+                MercuryLongitudePerihelionJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit31MercuryLongitudePerihelionJ2000Ed(JD);
+                },
 
-                VenusMeanLongitudeJ2000: function (JD) { },
-                VenusInclinationJ2000: function (JD) { },
-                VenusLongitudeAscendingNodeJ2000: function (JD) { },
-                VenusLongitudePerihelionJ2000: function (JD) { },
+                VenusMeanLongitudeJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit23VenusMeanLongitudeJ2000Ed(JD);
+                },
+                VenusInclinationJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit21VenusInclinationJ2000Ed(JD);
+                },
+                VenusLongitudeAscendingNodeJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit32VenusLongitudeAscendingNodeJ2000Ed(JD);
+                },
+                VenusLongitudePerihelionJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit29VenusLongitudePerihelionJ2000Ed(JD);
+                },
 
                 EarthMeanLongitudeJ2000: function (JD) { },
                 EarthInclinationJ2000: function (JD) { },
