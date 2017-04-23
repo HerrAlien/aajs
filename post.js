@@ -531,6 +531,56 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                     return __ZN25CAAElementsPlanetaryOrbit31NeptuneLongitudePerihelionJ2000Ed(JD);
                 },
 
+        },
+        Elliptical : {
+            DistanceToLightTime : function (distance) {
+                return __ZN13CAAElliptical19DistanceToLightTimeEd(distance);
+            },
+            /*  {
+    SUN = 0,
+    MERCURY,
+    VENUS,
+    MARS,
+    JUPITER,
+    SATURN,
+    URANUS,
+    NEPTUNE,
+    PLUTO
+  };
+*/
+            CalculatePlanetaryDetails :  function (jd, ellipticalObject, bHighPrecision) {
+                __ZN13CAAElliptical9CalculateEdNS_16EllipticalObjectEb(0, jd, ellipticalObject, bHighPrecision);
+                return {"ApparentGeocentricLongitude" : HEAPF64[0], "ApparentGeocentricLatitude" : HEAPF64[1], "ApparentGeocentricDistance" : HEAPF64[2],
+                "ApparentLightTime" : HEAPF64[3], "ApparentGeocentricRA" : HEAPF64[4], "ApparentGeocentricDeclination" : HEAPF64[5]};
+            },
+            SemiMajorAxisFromPerihelionDistance : function (q, e) {
+                ;
+            },
+            MeanMotionFromSemiMajorAxis : function (a) {
+                ;
+            },
+            CalculateObjectDetails (jd, ellipticalObjectElements, bHighPrecision) {
+                ;
+            },
+            InstantaneousVelocity: function (r, e) {
+                ;
+            },
+            VelocityAtPerihelion : function (e, a) {
+                ;
+            },
+            VelocityAtAphelion : function (e, a) {
+                ;
+            },
+            LengthOfEllipse : function (e, a) {
+                ;
+            },
+            CometMagnitude : function (g, delta, k, r) {
+                ;
+            },
+            MinorPlanetMagnitude : function (H, delta, G, r, PhaseAngle) {
+                ;
+            }
         }
+        
     };
 })();
