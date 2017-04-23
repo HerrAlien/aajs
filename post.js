@@ -479,15 +479,31 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                     return __ZN25CAAElementsPlanetaryOrbit28MarsLongitudePerihelionJ2000Ed(JD);
                 },
 
-                JupiterMeanLongitudeJ2000: function (JD) { },
-                JupiterInclinationJ2000: function (JD) { },
-                JupiterLongitudeAscendingNodeJ2000: function (JD) { },
-                JupiterLongitudePerihelionJ2000: function (JD) { },
+                JupiterMeanLongitudeJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit25JupiterMeanLongitudeJ2000Ed(JD);
+                },
+                JupiterInclinationJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit23JupiterInclinationJ2000Ed(JD);
+                },
+                JupiterLongitudeAscendingNodeJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit34JupiterLongitudeAscendingNodeJ2000Ed(JD);
+                },
+                JupiterLongitudePerihelionJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit31JupiterLongitudePerihelionJ2000Ed(JD);
+                },
 
-                SaturnMeanLongitudeJ2000: function (JD) { },
-                SaturnInclinationJ2000: function (JD) { },
-                SaturnLongitudeAscendingNodeJ2000: function (JD) { },
-                SaturnLongitudePerihelionJ2000: function (JD) { },
+                SaturnMeanLongitudeJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit24SaturnMeanLongitudeJ2000Ed(JD);
+                },
+                SaturnInclinationJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit22SaturnInclinationJ2000Ed(JD);
+                },
+                SaturnLongitudeAscendingNodeJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit33SaturnLongitudeAscendingNodeJ2000Ed(JD);
+                },
+                SaturnLongitudePerihelionJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit30SaturnLongitudePerihelionJ2000Ed(JD);
+                },
 
                 UranusMeanLongitudeJ2000: function (JD) { },
                 UranusInclinationJ2000: function (JD) { },
