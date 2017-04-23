@@ -505,15 +505,31 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                     return __ZN25CAAElementsPlanetaryOrbit30SaturnLongitudePerihelionJ2000Ed(JD);
                 },
 
-                UranusMeanLongitudeJ2000: function (JD) { },
-                UranusInclinationJ2000: function (JD) { },
-                UranusLongitudeAscendingNodeJ2000: function (JD) { },
-                UranusLongitudePerihelionJ2000: function (JD) { },
+                UranusMeanLongitudeJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit24UranusMeanLongitudeJ2000Ed(JD);
+                },
+                UranusInclinationJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit22UranusInclinationJ2000Ed(JD);
+                },
+                UranusLongitudeAscendingNodeJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit33UranusLongitudeAscendingNodeJ2000Ed(JD);
+                },
+                UranusLongitudePerihelionJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit30UranusLongitudePerihelionJ2000Ed(JD);
+                },
 
-                NeptuneMeanLongitudeJ2000: function (JD) { },
-                NeptuneInclinationJ2000: function (JD) { },
-                NeptuneLongitudeAscendingNodeJ2000: function (JD) { },
-                NeptuneLongitudePerihelionJ2000: function (JD) { },
+                NeptuneMeanLongitudeJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit25NeptuneMeanLongitudeJ2000Ed(JD);
+                },
+                NeptuneInclinationJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit23NeptuneInclinationJ2000Ed(JD);
+                },
+                NeptuneLongitudeAscendingNodeJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit34NeptuneLongitudeAscendingNodeJ2000Ed(JD);
+                },
+                NeptuneLongitudePerihelionJ2000: function (JD) { 
+                    return __ZN25CAAElementsPlanetaryOrbit31NeptuneLongitudePerihelionJ2000Ed(JD);
+                },
 
         }
     };
