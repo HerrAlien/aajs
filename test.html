@@ -10,102 +10,30 @@
 
     var JD = AAJS.Date.DateToJD (2016, 1, 1, true);
     var i = 0;
-    document.getElementById ("out").textContent = "" +
+    document.getElementById ("out").textContent = ""
     
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.MercuryMeanLongitude(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.MercurySemimajorAxis(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.MercuryEccentricity(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.MercuryInclination(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.MercuryLongitudeAscendingNode(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.MercuryLongitudePerihelion(JD) + "\n" +
+	+ JSON.stringify (AAJS.Sun.ApparentEclipticLatitude(JD, true)) + "\n"
+	+ JSON.stringify (AAJS.Sun.ApparentEclipticLongitude(JD, true)) + "\n"
+	+ JSON.stringify (AAJS.Sun.GeometricEclipticLongitude(JD, true)) + "\n"
+	+ JSON.stringify (AAJS.Sun.GeometricEclipticLatitude(JD, true)) + "\n"
+	+ JSON.stringify (AAJS.Sun.GeometricEclipticLongitudeJ2000(JD, true)) + "\n"
+	+ JSON.stringify (AAJS.Sun.GeometricEclipticLatitudeJ2000(JD, true)) + "\n"
 
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.VenusMeanLongitude(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.VenusSemimajorAxis(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.VenusEccentricity(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.VenusInclination(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.VenusLongitudeAscendingNode(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.VenusLongitudePerihelion(JD) + "\n" +
+	+ JSON.stringify (AAJS.Sun.GeometricFK5EclipticLongitude(JD, true)) + "\n"
+	+ JSON.stringify (AAJS.Sun.GeometricFK5EclipticLatitude(JD, true)) + "\n"
+	
+	+ JSON.stringify (AAJS.Sun.EquatorialRectangularCoordinatesMeanEquinox(JD, true)) + "\n"
 
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.EarthMeanLongitude(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.EarthSemimajorAxis(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.EarthEccentricity(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.EarthInclination(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.EarthLongitudePerihelion(JD) + "\n" +
+	+ JSON.stringify (AAJS.Sun.EclipticRectangularCoordinatesJ2000(JD, true)) + "\n"
 
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.MarsMeanLongitude(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.MarsSemimajorAxis(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.MarsEccentricity(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.MarsInclination(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.MarsLongitudeAscendingNode(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.MarsLongitudePerihelion(JD) + "\n" +
+	+ JSON.stringify (AAJS.Sun.EquatorialRectangularCoordinatesJ2000(JD, true)) + "\n"
 
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.JupiterMeanLongitude(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.JupiterSemimajorAxis(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.JupiterEccentricity(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.JupiterInclination(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.JupiterLongitudeAscendingNode(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.JupiterLongitudePerihelion(JD) + "\n" +
+	+ JSON.stringify (AAJS.Sun.EquatorialRectangularCoordinatesB1950(JD, true)) + "\n"
 
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.SaturnMeanLongitude(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.SaturnSemimajorAxis(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.SaturnEccentricity(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.SaturnInclination(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.SaturnLongitudeAscendingNode(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.SaturnLongitudePerihelion(JD) + "\n" +
+	+ JSON.stringify(AAJS.Sun.CalculatePhysicalDetails(JD, true)) + "\n"
 
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.UranusMeanLongitude(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.UranusSemimajorAxis(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.UranusEccentricity(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.UranusInclination(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.UranusLongitudeAscendingNode(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.UranusLongitudePerihelion(JD) + "\n" +
+	+ JSON.stringify (AAJS.Sun.TimeOfStartOfRotation(15)) + "\n"
 
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.NeptuneMeanLongitude(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.NeptuneSemimajorAxis(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.NeptuneEccentricity(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.NeptuneInclination(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.NeptuneLongitudeAscendingNode(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.NeptuneLongitudePerihelion(JD) + "\n" +
-
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.MercuryMeanLongitudeJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.MercuryInclinationJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.MercuryLongitudeAscendingNodeJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.MercuryLongitudePerihelionJ2000(JD) + "\n" +
-
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.VenusMeanLongitudeJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.VenusInclinationJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.VenusLongitudeAscendingNodeJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.VenusLongitudePerihelionJ2000(JD) + "\n" +
-
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.EarthMeanLongitudeJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.EarthInclinationJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.EarthLongitudeAscendingNodeJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.EarthLongitudePerihelionJ2000(JD) + "\n" +
-
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.MarsMeanLongitudeJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.MarsInclinationJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.MarsLongitudeAscendingNodeJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.MarsLongitudePerihelionJ2000(JD) + "\n" +
-
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.JupiterMeanLongitudeJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.JupiterInclinationJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.JupiterLongitudeAscendingNodeJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.JupiterLongitudePerihelionJ2000(JD) + "\n" +
-
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.SaturnMeanLongitudeJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.SaturnInclinationJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.SaturnLongitudeAscendingNodeJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.SaturnLongitudePerihelionJ2000(JD) + "\n" +
-
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.UranusMeanLongitudeJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.UranusInclinationJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.UranusLongitudeAscendingNodeJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.UranusLongitudePerihelionJ2000(JD) + "\n" +
-
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.NeptuneMeanLongitudeJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.NeptuneInclinationJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.NeptuneLongitudeAscendingNodeJ2000(JD) + "\n" +
-	 ++i  + ")  "+ AAJS.ElementsPlanetaryOrbit.NeptuneLongitudePerihelionJ2000(JD) + "\n"
 
         
         ;
