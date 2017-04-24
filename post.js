@@ -532,6 +532,67 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                 },
 
         },
+        
+        //* needs to be tested
+        /* both position and physical */
+        Sun : {
+            // Position.
+             GeometricEclipticLongitude: function (JD,  bHighPrecision) { 
+                return __ZN6CAASun26GeometricEclipticLongitudeEdb(JD,  bHighPrecision);
+             },
+             GeometricEclipticLatitude: function (JD,  bHighPrecision) { 
+                return __ZN6CAASun25GeometricEclipticLatitudeEdb (JD,  bHighPrecision);
+             },
+             GeometricEclipticLongitudeJ2000: function (JD,  bHighPrecision) { 
+                return __ZN6CAASun31GeometricEclipticLongitudeJ2000Edb(JD,  bHighPrecision);
+             },
+             GeometricEclipticLatitudeJ2000: function (JD,  bHighPrecision) { 
+                return __ZN6CAASun30GeometricEclipticLatitudeJ2000Edb(JD,  bHighPrecision);
+             },
+             GeometricFK5EclipticLongitude: function (JD,  bHighPrecision) { 
+                return __ZN6CAASun29GeometricFK5EclipticLongitudeEdb(JD,  bHighPrecision);
+             },
+             GeometricFK5EclipticLatitude: function (JD,  bHighPrecision) { 
+                return __ZN6CAASun28GeometricFK5EclipticLatitudeEdb(JD,  bHighPrecision);
+             },
+             ApparentEclipticLongitude: function (JD,  bHighPrecision) { 
+                return __ZN6CAASun25ApparentEclipticLongitudeEdb(JD,  bHighPrecision);
+             },
+             ApparentEclipticLatitude: function (JD,  bHighPrecision) { 
+                return __ZN6CAASun24ApparentEclipticLatitudeEdb(JD,  bHighPrecision);
+             },
+             
+             EquatorialRectangularCoordinatesMeanEquinox: function (JD,  bHighPrecision) { 
+                __ZN6CAASun43EquatorialRectangularCoordinatesMeanEquinoxEdb(0, JD,  bHighPrecision);
+                return { "X" : HEAPF64[0], "Y" : HEAPF64[1], "Z" : HEAPF64[2] };
+             },
+             EclipticRectangularCoordinatesJ2000: function (JD,  bHighPrecision) { 
+                __ZN6CAASun35EclipticRectangularCoordinatesJ2000Edb(0, JD,  bHighPrecision);
+                return { "X" : HEAPF64[0], "Y" : HEAPF64[1], "Z" : HEAPF64[2] };
+             },
+             EquatorialRectangularCoordinatesJ2000: function (JD,  bHighPrecision) { 
+                __ZN6CAASun37EquatorialRectangularCoordinatesJ2000Edb(0, JD,  bHighPrecision);
+                return { "X" : HEAPF64[0], "Y" : HEAPF64[1], "Z" : HEAPF64[2] };
+             },
+             EquatorialRectangularCoordinatesB1950: function (JD,  bHighPrecision) { 
+                __ZN6CAASun37EquatorialRectangularCoordinatesB1950Edb(0, JD,  bHighPrecision);
+                return { "X" : HEAPF64[0], "Y" : HEAPF64[1], "Z" : HEAPF64[2] };
+             },
+             EquatorialRectangularCoordinatesAnyEquinox: function (JD,  JDEquinox,  bHighPrecision) { 
+                __ZN6CAASun42EquatorialRectangularCoordinatesAnyEquinoxEddb(0, JD,  JDEquinox, bHighPrecision);
+                return { "X" : HEAPF64[0], "Y" : HEAPF64[1], "Z" : HEAPF64[2] };
+             },
+             
+             // Physical.
+             CalculatePhysicalDetails : function (JD,  bHighPrecision) { 
+                __ZN14CAAPhysicalSun9CalculateEdb(0, JD,  bHighPrecision);
+                return { "P" : HEAPF64[0], "B0" : HEAPF64[1], "L0" : HEAPF64[2] };
+             },
+             TimeOfStartOfRotation : function (C) { 
+                return __ZN14CAAPhysicalSun21TimeOfStartOfRotationEl(C);
+             }
+        },
+ 
         Elliptical : {
             DistanceToLightTime : function (distance) {
                 return __ZN13CAAElliptical19DistanceToLightTimeEd(distance);
@@ -546,7 +607,10 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
     URANUS,
     NEPTUNE,
     PLUTO
-  };
+ 
+This delegates computations to dedicated classes. Entry point to generate tables for planets.
+
+ };
 */
             CalculatePlanetaryDetails :  function (jd, ellipticalObject, bHighPrecision) {
                 __ZN13CAAElliptical9CalculateEdNS_16EllipticalObjectEb(0, jd, ellipticalObject, bHighPrecision);
