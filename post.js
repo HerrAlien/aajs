@@ -86,6 +86,20 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             Galactic2Equatorial : function (l, b) {
                 __ZN27CAACoordinateTransformation19Galactic2EquatorialEdd (0, l, b);
                 return { "X" : HEAPF64[0], "Y" : HEAPF64[1] };
+            },
+            
+            ToSexagesimal : function (numericalValue) {
+                var isNegative  = numericalValue < 0;
+                numericalValue = Math.abs(numericalValue);
+                var r = numericalValue;
+                var M = Math.floor(r);
+                r = (r - M) * 60;
+                var m = Math.floor (r);
+                r = (r - m) * 60;
+                var s = Math.floor (r * 10) / 10;
+                if (isNegative)
+                    M = -M;
+                return {"Ord3" : M, "Ord2" : m, "Ord1" : s};
             }
         },
         Date : {
@@ -583,6 +597,11 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                 return { "X" : HEAPF64[0], "Y" : HEAPF64[1], "Z" : HEAPF64[2] };
              },
              
+             EquatorialCoordinates (JD, bHighPrecision) {
+                var Epsilon = __ZN11CAANutation23TrueObliquityOfEclipticEd(JD);
+                return AAJS.CoordinateTransformation.Ecliptic2Equatorial(this.ApparentEclipticLongitude(JD, bHighPrecision), this.ApparentEclipticLatitude(JD, bHighPrecision), Epsilon);
+             },
+             
              // Physical.
              CalculatePhysicalDetails : function (JD,  bHighPrecision) { 
                 __ZN14CAAPhysicalSun9CalculateEdb(0, JD,  bHighPrecision);
@@ -591,6 +610,27 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
              TimeOfStartOfRotation : function (C) { 
                 return __ZN14CAAPhysicalSun21TimeOfStartOfRotationEl(C);
              }
+        },
+ 
+        Nutation : {
+            TrueObliquityOfEcliptic : function (JD) {
+                return __ZN11CAANutation23TrueObliquityOfEclipticEd (JD);
+            },
+            InLongitude : function (JD) {
+                return __ZN11CAANutation19NutationInLongitudeEd(JD);
+            },
+            InObliquity : function (JD) {
+                return __ZN11CAANutation19NutationInObliquityEd(JD);
+            },
+            MeanObliquityOfEcliptic : function (JD) {
+                return __ZN11CAANutation23MeanObliquityOfEclipticEd(JD);
+            },
+            InRightAscension : function (ra, dec, obliquity, nutationInLongitude, nutationInObliquity) {
+                return __ZN11CAANutation24NutationInRightAscensionEddddd (ra, dec, obliquity, nutationInLongitude, nutationInObliquity);
+            },
+            InDeclination : function (ra, obliquity, nutationInLongitude, nutationInObliquity) {
+                return __ZN11CAANutation21NutationInDeclinationEdddd (ra, obliquity, nutationInLongitude, nutationInObliquity);
+            }
         },
  
         Elliptical : {

@@ -8,27 +8,16 @@
 
 <script type="text/javascript">
 
-    var JD = AAJS.Date.DateToJD (2016, 1, 1, true);
+    var JD = AAJS.Date.DateToJD (2017, 1, 3, true);
     var i = 0;
+    
+    var radec = AAJS.Sun.EquatorialCoordinates(JD, true);
+    radec.X = AAJS.CoordinateTransformation.ToSexagesimal (radec.X);
+    radec.Y = AAJS.CoordinateTransformation.ToSexagesimal (radec.Y);
+    
     document.getElementById ("out").textContent = ""
     
-	+ JSON.stringify (AAJS.Sun.ApparentEclipticLatitude(JD, true)) + "\n"
-	+ JSON.stringify (AAJS.Sun.ApparentEclipticLongitude(JD, true)) + "\n"
-	+ JSON.stringify (AAJS.Sun.GeometricEclipticLongitude(JD, true)) + "\n"
-	+ JSON.stringify (AAJS.Sun.GeometricEclipticLatitude(JD, true)) + "\n"
-	+ JSON.stringify (AAJS.Sun.GeometricEclipticLongitudeJ2000(JD, true)) + "\n"
-	+ JSON.stringify (AAJS.Sun.GeometricEclipticLatitudeJ2000(JD, true)) + "\n"
-
-	+ JSON.stringify (AAJS.Sun.GeometricFK5EclipticLongitude(JD, true)) + "\n"
-	+ JSON.stringify (AAJS.Sun.GeometricFK5EclipticLatitude(JD, true)) + "\n"
-	
-	+ JSON.stringify (AAJS.Sun.EquatorialRectangularCoordinatesMeanEquinox(JD, true)) + "\n"
-
-	+ JSON.stringify (AAJS.Sun.EclipticRectangularCoordinatesJ2000(JD, true)) + "\n"
-
-	+ JSON.stringify (AAJS.Sun.EquatorialRectangularCoordinatesJ2000(JD, true)) + "\n"
-
-	+ JSON.stringify (AAJS.Sun.EquatorialRectangularCoordinatesB1950(JD, true)) + "\n"
+	+ JSON.stringify(radec) + "\n"
 
 	+ JSON.stringify(AAJS.Sun.CalculatePhysicalDetails(JD, true)) + "\n"
 
