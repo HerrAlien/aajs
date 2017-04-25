@@ -15,7 +15,34 @@ PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License along
 with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
 
-    return {        
+    return {
+        Numerical : {
+            RoundTo1Decimal : function (n) {
+                return Math.round (n * 10) / 10;
+            },
+
+            RoundTo2Decimals : function (n) {
+                return Math.round (n * 100) / 100;
+            },
+
+            RoundTo3Decimals : function (n) {
+                return Math.round (n * 1000) / 1000;
+            },
+            
+            ToSexagesimal : function (numericalValue) {
+                var isNegative  = numericalValue < 0;
+                numericalValue = Math.abs(numericalValue);
+                var r = numericalValue;
+                var M = Math.floor(r);
+                r = (r - M) * 60;
+                var m = Math.floor (r);
+                r = (r - m) * 60;
+                var s = this.RoundTo2Decimals(r);
+                if (isNegative)
+                    M = -M;
+                return {"Ord3" : M, "Ord2" : m, "Ord1" : s};
+            }
+        },
         Aberration : {
             EarthVelocity : function (JD, bHighPrecision) {
                 __ZN13CAAAberration13EarthVelocityEdb(0, JD, bHighPrecision);
@@ -86,21 +113,7 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             Galactic2Equatorial : function (l, b) {
                 __ZN27CAACoordinateTransformation19Galactic2EquatorialEdd (0, l, b);
                 return { "X" : HEAPF64[0], "Y" : HEAPF64[1] };
-            },
-            
-            ToSexagesimal : function (numericalValue) {
-                var isNegative  = numericalValue < 0;
-                numericalValue = Math.abs(numericalValue);
-                var r = numericalValue;
-                var M = Math.floor(r);
-                r = (r - M) * 60;
-                var m = Math.floor (r);
-                r = (r - m) * 60;
-                var s = Math.floor (r * 10) / 10;
-                if (isNegative)
-                    M = -M;
-                return {"Ord3" : M, "Ord2" : m, "Ord1" : s};
-            }
+            }            
         },
         Date : {
             DateToJD : function (Year, Month, Day, bGregorianCalendar) {

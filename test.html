@@ -12,8 +12,8 @@
     var i = 0;
     
     var radec = AAJS.Sun.EquatorialCoordinates(JD, true);
-    radec.X = AAJS.CoordinateTransformation.ToSexagesimal (radec.X);
-    radec.Y = AAJS.CoordinateTransformation.ToSexagesimal (radec.Y);
+    radec.X = AAJS.Numerical.ToSexagesimal (radec.X);
+    radec.Y = AAJS.Numerical.ToSexagesimal (radec.Y);
     
     document.getElementById ("out").textContent = ""
     
@@ -23,7 +23,7 @@
 
 //	+ JSON.stringify (AAJS.Sun.TimeOfStartOfRotation(15)) + "\n"
 
-    + JSON.stringify (AAJS.CoordinateTransformation.ToSexagesimal
+    + JSON.stringify (AAJS.Numerical.ToSexagesimal
     (AAJS.Sun.Diameter(JD, true)/3600))
         
         ;
