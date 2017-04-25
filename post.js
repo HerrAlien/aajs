@@ -597,9 +597,15 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                 return { "X" : HEAPF64[0], "Y" : HEAPF64[1], "Z" : HEAPF64[2] };
              },
              
-             EquatorialCoordinates (JD, bHighPrecision) {
+             EquatorialCoordinates : function (JD, bHighPrecision) {
                 var Epsilon = __ZN11CAANutation23TrueObliquityOfEclipticEd(JD);
                 return AAJS.CoordinateTransformation.Ecliptic2Equatorial(this.ApparentEclipticLongitude(JD, bHighPrecision), this.ApparentEclipticLatitude(JD, bHighPrecision), Epsilon);
+             },
+             
+             Diameter : function (JD, bHighPrecision) {
+                 var coords = AAJS.Sun.EclipticRectangularCoordinatesJ2000(JD, true);
+                 var r = Math.sqrt (coords.X * coords.X + coords.Y * coords.Y + coords.Z * coords.Z);
+                 return 2 * AAJS.Diameters.SunSemidiameterA (r);
              },
              
              // Physical.

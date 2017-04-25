@@ -21,9 +21,10 @@
 
 	+ JSON.stringify(AAJS.Sun.CalculatePhysicalDetails(JD, true)) + "\n"
 
-	+ JSON.stringify (AAJS.Sun.TimeOfStartOfRotation(15)) + "\n"
+//	+ JSON.stringify (AAJS.Sun.TimeOfStartOfRotation(15)) + "\n"
 
-
+    + JSON.stringify (AAJS.CoordinateTransformation.ToSexagesimal
+    (AAJS.Sun.Diameter(JD, true)/3600))
         
         ;
 
