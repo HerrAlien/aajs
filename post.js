@@ -151,8 +151,30 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             
             DaysInMonth : function (Month, bLeapYear) {
                 return __ZN7CAADate11DaysInMonthElb (Month, bLeapYear);
+            },
+            
+            // non-normed!
+            JD2ST : function (JD) {
+                var nonNormedLST = 280.46061837 + 360.98564736629 * (currentJD - 2451545);
+                return nonNormedLST - 360 * Math.floor (nonNormedLST / 360)
+            },
+            
+            ST2NextJD : function (st, startOfDayJD) {
+                // todo ...
+            },
+            
+            JD2Date : function (JD) {
+                var y = 4716, v = 3, j = 1401, u = 5, m = 2, s = 153, n = 12, w = 2, 
+                    r = 4, B = 274277, p = 1461, C = -38;
+                var f = JD + j + Math.floor((Math.floor((4 * JD + B) / 146097) * 3) / 4) + C;
+                var e = r * f + v;
+                var g = Math.floor((e % p) / r);
+                var h = u * g + w;
+                var M = (Math.floor(h / s) + m) % n + 1;
+                return {"D" : Math.floor((h % s) / u) + 1,
+                        "M" : M,
+                        "Y" : Math.floor(e / p) - y + Math.floor((n + m - M) / n) };
             }
-
         },
         
         Diameters : {

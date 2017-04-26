@@ -22,4 +22,6 @@ for /F %%G in ('dir /b AA*.cpp') do SET A="!A! %%G"
 
 set FILES=%A:"=%
 
-em++ --pre-js "%~dp0\pre.js" --post-js "%~dp0\post.js" -s LINKABLE=1 -s EXPORT_ALL=1 -s NO_FILESYSTEM=1 %FILES% %*
+set FILES_NOTEST=%FILES:AATest.cpp=%
+
+em++ --pre-js "%~dp0\pre.js" --post-js "%~dp0\post.js" -s LINKABLE=1 -s EXPORT_ALL=1 -s NO_FILESYSTEM=1 %FILES_NOTEST% %*
