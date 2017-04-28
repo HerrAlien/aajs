@@ -154,9 +154,9 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                 return __ZN7CAADate11DaysInMonthElb (Month, bLeapYear);
             },
             
-            // non-normed!
+            // normed, in degrees
             JD2ST : function (JD) {
-                var nonNormedLST = 280.46061837 + 360.98564736629 * (currentJD - 2451545);
+                var nonNormedLST = 280.46061837 + 360.98564736629 * (JD - 2451545);
                 return nonNormedLST - 360 * Math.floor (nonNormedLST / 360)
             },
             
