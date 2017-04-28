@@ -1,5 +1,6 @@
-/* aajs - JavaScript port of the aa+ C++ implementation for the algorithms as 
-presented in the book "Astronomical Algorithms" by Jean Meeus. 
+/* aajs - JavaScript port of the aa+ C++ implementation 
+(http://www.naughter.com/aa.html)  for the algorithms as presented in the book
+"Astronomical Algorithms" by Jean Meeus. 
 
 Copyright 2017 Herr_Alien <alexandru.garofide@gmail.com>
 

@@ -1,5 +1,6 @@
-rem aajs - JavaScript port of the aa+ C++ implementation for the algorithms as 
-rem presented in the book "Astronomical Algorithms" by Jean Meeus. 
+rem aajs - JavaScript port of the aa+ C++ implementation 
+rem (http://www.naughter.com/aa.html)  for the algorithms as presented in the book
+rem "Astronomical Algorithms" by Jean Meeus.
 
 rem Copyright 2017 Herr_Alien <alexandru.garofide@gmail.com>
 
