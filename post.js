@@ -17,33 +17,6 @@ You should have received a copy of the GNU Affero General Public License along
 with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
 
     return {
-        Numerical : {
-            RoundTo1Decimal : function (n) {
-                return Math.round (n * 10) / 10;
-            },
-
-            RoundTo2Decimals : function (n) {
-                return Math.round (n * 100) / 100;
-            },
-
-            RoundTo3Decimals : function (n) {
-                return Math.round (n * 1000) / 1000;
-            },
-            
-            ToSexagesimal : function (numericalValue) {
-                var isNegative  = numericalValue < 0;
-                numericalValue = Math.abs(numericalValue);
-                var r = numericalValue;
-                var M = Math.floor(r);
-                r = (r - M) * 60;
-                var m = Math.floor (r);
-                r = (r - m) * 60;
-                var s = this.RoundTo2Decimals(r);
-                if (isNegative)
-                    M = -M;
-                return {"Ord3" : M, "Ord2" : m, "Ord1" : s};
-            }
-        },
         Aberration : {
             EarthVelocity : function (JD, bHighPrecision) {
                 __ZN13CAAAberration13EarthVelocityEdb(0, JD, bHighPrecision);
@@ -235,18 +208,17 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
         },
         
         DynamicalTime : {
-                DeltaT : function (JD) { return __ZN16CAADynamicalTime6DeltaTEd (JD); },
-                CumulativeLeapSeconds : function (JD) { 
+            DeltaT : function (JD) { return __ZN16CAADynamicalTime6DeltaTEd (JD); },
+            CumulativeLeapSeconds : function (JD) { 
                     return  __ZN16CAADynamicalTime21CumulativeLeapSecondsEd (JD); 
-                },
-                TT2UTC : function (JD) { return __ZN16CAADynamicalTime6TT2UTCEd(JD); },
-                UTC2TT : function (JD) { return __ZN16CAADynamicalTime6UTC2TTEd(JD); },
-                TT2TAI : function (JD) { return __ZN16CAADynamicalTime6TT2TAIEd(JD); },
-                TAI2TT : function (JD) { return __ZN16CAADynamicalTime6TAI2TTEd(JD); },
-                TT2UT1 : function (JD) { return __ZN16CAADynamicalTime6TT2UT1Ed(JD); },
-                UT12TT : function (JD) { return __ZN16CAADynamicalTime6UT12TTEd(JD); },
-                UT1MinusUTC : function (JD) { return __ZN16CAADynamicalTime11UT1MinusUTCEd(JD); }
-            
+            },
+            TT2UTC : function (JD) { return __ZN16CAADynamicalTime6TT2UTCEd(JD); },
+            UTC2TT : function (JD) { return __ZN16CAADynamicalTime6UTC2TTEd(JD); },
+            TT2TAI : function (JD) { return __ZN16CAADynamicalTime6TT2TAIEd(JD); },
+            TAI2TT : function (JD) { return __ZN16CAADynamicalTime6TAI2TTEd(JD); },
+            TT2UT1 : function (JD) { return __ZN16CAADynamicalTime6TT2UT1Ed(JD); },
+            UT12TT : function (JD) { return __ZN16CAADynamicalTime6UT12TTEd(JD); },
+            UT1MinusUTC : function (JD) { return __ZN16CAADynamicalTime11UT1MinusUTCEd(JD); }
         },
         
         Earth : {
@@ -305,259 +277,258 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             }
         },
         ElementsPlanetaryOrbit : {
-                MercuryMeanLongitude: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit20MercuryMeanLongitudeEd(JD);
-                },
-                MercurySemimajorAxis: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit20MercurySemimajorAxisEd(JD);
-                },
-                MercuryEccentricity: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit19MercuryEccentricityEd(JD);
-                },
-                MercuryInclination: function (JD) {
-                    return __ZN25CAAElementsPlanetaryOrbit18MercuryInclinationEd (JD);
-                },
-                MercuryLongitudeAscendingNode: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit29MercuryLongitudeAscendingNodeEd (JD);
-                },
-                MercuryLongitudePerihelion: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit26MercuryLongitudePerihelionEd (JD);
-                },
+            MercuryMeanLongitude: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit20MercuryMeanLongitudeEd(JD);
+            },
+            MercurySemimajorAxis: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit20MercurySemimajorAxisEd(JD);
+            },
+            MercuryEccentricity: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit19MercuryEccentricityEd(JD);
+            },
+            MercuryInclination: function (JD) {
+                return __ZN25CAAElementsPlanetaryOrbit18MercuryInclinationEd (JD);
+            },
+            MercuryLongitudeAscendingNode: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit29MercuryLongitudeAscendingNodeEd (JD);
+            },
+            MercuryLongitudePerihelion: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit26MercuryLongitudePerihelionEd (JD);
+            },
 
-                VenusMeanLongitude: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit18VenusMeanLongitudeEd (JD);
-                },
-                VenusSemimajorAxis: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit18VenusSemimajorAxisEd (JD);
-                },
-                VenusEccentricity: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit17VenusEccentricityEd (JD);
-                },
-                VenusInclination: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit16VenusInclinationEd (JD);
-                },
-                VenusLongitudeAscendingNode: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit27VenusLongitudeAscendingNodeEd (JD);
-                },
-                VenusLongitudePerihelion: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit24VenusLongitudePerihelionEd (JD);
-                },
+            VenusMeanLongitude: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit18VenusMeanLongitudeEd (JD);
+            },
+            VenusSemimajorAxis: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit18VenusSemimajorAxisEd (JD);
+            },
+            VenusEccentricity: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit17VenusEccentricityEd (JD);
+            },
+            VenusInclination: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit16VenusInclinationEd (JD);
+            },
+            VenusLongitudeAscendingNode: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit27VenusLongitudeAscendingNodeEd (JD);
+            },
+            VenusLongitudePerihelion: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit24VenusLongitudePerihelionEd (JD);
+            },
 
-                EarthMeanLongitude: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit18EarthMeanLongitudeEd (JD);
-                },
-                EarthSemimajorAxis: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit18EarthSemimajorAxisEd (JD);
-                },
-                EarthEccentricity: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit17EarthEccentricityEd (JD);
-                },
-                EarthInclination: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit16EarthInclinationEd (JD);
-                },
-                EarthLongitudePerihelion: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit24EarthLongitudePerihelionEd(JD);
-                },
+            EarthMeanLongitude: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit18EarthMeanLongitudeEd (JD);
+            },
+            EarthSemimajorAxis: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit18EarthSemimajorAxisEd (JD);
+            },
+            EarthEccentricity: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit17EarthEccentricityEd (JD);
+            },
+            EarthInclination: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit16EarthInclinationEd (JD);
+            },
+            EarthLongitudePerihelion: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit24EarthLongitudePerihelionEd(JD);
+            },
 
-                MarsMeanLongitude: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit17MarsMeanLongitudeEd(JD);
-                },
-                MarsSemimajorAxis: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit17MarsSemimajorAxisEd(JD);
-                },
-                MarsEccentricity: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit16MarsEccentricityEd(JD);
-                },
-                MarsInclination: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit15MarsInclinationEd(JD);
-                },
-                MarsLongitudeAscendingNode: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit26MarsLongitudeAscendingNodeEd(JD);
-                },
-                MarsLongitudePerihelion: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit23MarsLongitudePerihelionEd(JD);
-                },
+            MarsMeanLongitude: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit17MarsMeanLongitudeEd(JD);
+            },
+            MarsSemimajorAxis: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit17MarsSemimajorAxisEd(JD);
+            },
+            MarsEccentricity: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit16MarsEccentricityEd(JD);
+            },
+            MarsInclination: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit15MarsInclinationEd(JD);
+            },
+            MarsLongitudeAscendingNode: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit26MarsLongitudeAscendingNodeEd(JD);
+            },
+            MarsLongitudePerihelion: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit23MarsLongitudePerihelionEd(JD);
+            },
 
-                JupiterMeanLongitude: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit20JupiterMeanLongitudeEd (JD);
-                },
-                JupiterSemimajorAxis: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit20JupiterSemimajorAxisEd(JD);
-                },
-                JupiterEccentricity: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit19JupiterEccentricityEd (JD);
-                },
-                JupiterInclination: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit18JupiterInclinationEd(JD);
-                },
-                JupiterLongitudeAscendingNode: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit29JupiterLongitudeAscendingNodeEd(JD);
-                },
-                JupiterLongitudePerihelion: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit26JupiterLongitudePerihelionEd (JD);
-                },
+            JupiterMeanLongitude: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit20JupiterMeanLongitudeEd (JD);
+            },
+            JupiterSemimajorAxis: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit20JupiterSemimajorAxisEd(JD);
+            },
+            JupiterEccentricity: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit19JupiterEccentricityEd (JD);
+            },
+            JupiterInclination: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit18JupiterInclinationEd(JD);
+            },
+            JupiterLongitudeAscendingNode: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit29JupiterLongitudeAscendingNodeEd(JD);
+            },
+            JupiterLongitudePerihelion: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit26JupiterLongitudePerihelionEd (JD);
+            },
 
-                SaturnMeanLongitude: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit19SaturnMeanLongitudeEd (JD);
-                },
-                SaturnSemimajorAxis: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit19SaturnSemimajorAxisEd (JD);
-                },
-                SaturnEccentricity: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit18SaturnEccentricityEd (JD);
-                },
-                SaturnInclination: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit17SaturnInclinationEd (JD);
-                },
-                SaturnLongitudeAscendingNode: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit28SaturnLongitudeAscendingNodeEd (JD);
-                },
-                SaturnLongitudePerihelion: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit25SaturnLongitudePerihelionEd(JD);
-                },
+            SaturnMeanLongitude: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit19SaturnMeanLongitudeEd (JD);
+            },
+            SaturnSemimajorAxis: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit19SaturnSemimajorAxisEd (JD);
+            },
+            SaturnEccentricity: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit18SaturnEccentricityEd (JD);
+            },
+            SaturnInclination: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit17SaturnInclinationEd (JD);
+            },
+            SaturnLongitudeAscendingNode: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit28SaturnLongitudeAscendingNodeEd (JD);
+            },
+            SaturnLongitudePerihelion: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit25SaturnLongitudePerihelionEd(JD);
+            },
 
-                UranusMeanLongitude: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit19UranusMeanLongitudeEd(JD);
-                },
-                UranusSemimajorAxis: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit19UranusSemimajorAxisEd(JD);
-                },
-                UranusEccentricity: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit18UranusEccentricityEd(JD);
-                },
-                UranusInclination: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit17UranusInclinationEd(JD);
-                },
-                UranusLongitudeAscendingNode: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit28UranusLongitudeAscendingNodeEd(JD);
-                },
-                UranusLongitudePerihelion: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit25UranusLongitudePerihelionEd(JD);
-                },
+            UranusMeanLongitude: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit19UranusMeanLongitudeEd(JD);
+            },
+            UranusSemimajorAxis: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit19UranusSemimajorAxisEd(JD);
+            },
+            UranusEccentricity: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit18UranusEccentricityEd(JD);
+            },
+            UranusInclination: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit17UranusInclinationEd(JD);
+            },
+            UranusLongitudeAscendingNode: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit28UranusLongitudeAscendingNodeEd(JD);
+            },
+            UranusLongitudePerihelion: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit25UranusLongitudePerihelionEd(JD);
+            },
 
-                NeptuneMeanLongitude: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit20NeptuneMeanLongitudeEd(JD);
-                },
-                NeptuneSemimajorAxis: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit20NeptuneSemimajorAxisEd(JD);
-                },
-                NeptuneEccentricity: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit19NeptuneEccentricityEd(JD);
-                },
-                NeptuneInclination: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit18NeptuneInclinationEd (JD);
-                },
-                NeptuneLongitudeAscendingNode: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit29NeptuneLongitudeAscendingNodeEd(JD);
-                },
-                NeptuneLongitudePerihelion: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit26NeptuneLongitudePerihelionEd (JD);
-                },
+            NeptuneMeanLongitude: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit20NeptuneMeanLongitudeEd(JD);
+            },
+            NeptuneSemimajorAxis: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit20NeptuneSemimajorAxisEd(JD);
+            },
+            NeptuneEccentricity: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit19NeptuneEccentricityEd(JD);
+            },
+            NeptuneInclination: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit18NeptuneInclinationEd (JD);
+            },
+            NeptuneLongitudeAscendingNode: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit29NeptuneLongitudeAscendingNodeEd(JD);
+            },
+            NeptuneLongitudePerihelion: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit26NeptuneLongitudePerihelionEd (JD);
+            },
 
-                MercuryMeanLongitudeJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit25MercuryMeanLongitudeJ2000Ed(JD);
-                },
-                MercuryInclinationJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit23MercuryInclinationJ2000Ed(JD);
-                },
-                MercuryLongitudeAscendingNodeJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit34MercuryLongitudeAscendingNodeJ2000Ed(JD);
-                },
-                MercuryLongitudePerihelionJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit31MercuryLongitudePerihelionJ2000Ed(JD);
-                },
+            MercuryMeanLongitudeJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit25MercuryMeanLongitudeJ2000Ed(JD);
+            },
+            MercuryInclinationJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit23MercuryInclinationJ2000Ed(JD);
+            },
+            MercuryLongitudeAscendingNodeJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit34MercuryLongitudeAscendingNodeJ2000Ed(JD);
+            },
+            MercuryLongitudePerihelionJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit31MercuryLongitudePerihelionJ2000Ed(JD);
+            },
 
-                VenusMeanLongitudeJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit23VenusMeanLongitudeJ2000Ed(JD);
-                },
-                VenusInclinationJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit21VenusInclinationJ2000Ed(JD);
-                },
-                VenusLongitudeAscendingNodeJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit32VenusLongitudeAscendingNodeJ2000Ed(JD);
-                },
-                VenusLongitudePerihelionJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit29VenusLongitudePerihelionJ2000Ed(JD);
-                },
+            VenusMeanLongitudeJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit23VenusMeanLongitudeJ2000Ed(JD);
+            },
+            VenusInclinationJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit21VenusInclinationJ2000Ed(JD);
+            },
+            VenusLongitudeAscendingNodeJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit32VenusLongitudeAscendingNodeJ2000Ed(JD);
+            },
+            VenusLongitudePerihelionJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit29VenusLongitudePerihelionJ2000Ed(JD);
+            },
 
-                EarthMeanLongitudeJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit23EarthMeanLongitudeJ2000Ed(JD);
-                },
-                EarthInclinationJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit21EarthInclinationJ2000Ed(JD);
-                },
-                EarthLongitudeAscendingNodeJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit32EarthLongitudeAscendingNodeJ2000Ed(JD);
-                },
-                EarthLongitudePerihelionJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit29EarthLongitudePerihelionJ2000Ed(JD);
-                },
+            EarthMeanLongitudeJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit23EarthMeanLongitudeJ2000Ed(JD);
+            },
+            EarthInclinationJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit21EarthInclinationJ2000Ed(JD);
+            },
+            EarthLongitudeAscendingNodeJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit32EarthLongitudeAscendingNodeJ2000Ed(JD);
+            },
+            EarthLongitudePerihelionJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit29EarthLongitudePerihelionJ2000Ed(JD);
+            },
 
-                MarsMeanLongitudeJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit22MarsMeanLongitudeJ2000Ed(JD);
-                },
-                MarsInclinationJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit20MarsInclinationJ2000Ed(JD);
-                },
-                MarsLongitudeAscendingNodeJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit31MarsLongitudeAscendingNodeJ2000Ed(JD);
-                },
-                MarsLongitudePerihelionJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit28MarsLongitudePerihelionJ2000Ed(JD);
-                },
+            MarsMeanLongitudeJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit22MarsMeanLongitudeJ2000Ed(JD);
+            },
+            MarsInclinationJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit20MarsInclinationJ2000Ed(JD);
+            },
+            MarsLongitudeAscendingNodeJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit31MarsLongitudeAscendingNodeJ2000Ed(JD);
+            },
+            MarsLongitudePerihelionJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit28MarsLongitudePerihelionJ2000Ed(JD);
+            },
 
-                JupiterMeanLongitudeJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit25JupiterMeanLongitudeJ2000Ed(JD);
-                },
-                JupiterInclinationJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit23JupiterInclinationJ2000Ed(JD);
-                },
-                JupiterLongitudeAscendingNodeJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit34JupiterLongitudeAscendingNodeJ2000Ed(JD);
-                },
-                JupiterLongitudePerihelionJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit31JupiterLongitudePerihelionJ2000Ed(JD);
-                },
+            JupiterMeanLongitudeJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit25JupiterMeanLongitudeJ2000Ed(JD);
+            },
+            JupiterInclinationJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit23JupiterInclinationJ2000Ed(JD);
+            },
+            JupiterLongitudeAscendingNodeJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit34JupiterLongitudeAscendingNodeJ2000Ed(JD);
+            },
+            JupiterLongitudePerihelionJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit31JupiterLongitudePerihelionJ2000Ed(JD);
+            },
 
-                SaturnMeanLongitudeJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit24SaturnMeanLongitudeJ2000Ed(JD);
-                },
-                SaturnInclinationJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit22SaturnInclinationJ2000Ed(JD);
-                },
-                SaturnLongitudeAscendingNodeJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit33SaturnLongitudeAscendingNodeJ2000Ed(JD);
-                },
-                SaturnLongitudePerihelionJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit30SaturnLongitudePerihelionJ2000Ed(JD);
-                },
+            SaturnMeanLongitudeJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit24SaturnMeanLongitudeJ2000Ed(JD);
+            },
+            SaturnInclinationJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit22SaturnInclinationJ2000Ed(JD);
+            },
+            SaturnLongitudeAscendingNodeJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit33SaturnLongitudeAscendingNodeJ2000Ed(JD);
+            },
+            SaturnLongitudePerihelionJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit30SaturnLongitudePerihelionJ2000Ed(JD);
+            },
 
-                UranusMeanLongitudeJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit24UranusMeanLongitudeJ2000Ed(JD);
-                },
-                UranusInclinationJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit22UranusInclinationJ2000Ed(JD);
-                },
-                UranusLongitudeAscendingNodeJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit33UranusLongitudeAscendingNodeJ2000Ed(JD);
-                },
-                UranusLongitudePerihelionJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit30UranusLongitudePerihelionJ2000Ed(JD);
-                },
+            UranusMeanLongitudeJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit24UranusMeanLongitudeJ2000Ed(JD);
+            },
+            UranusInclinationJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit22UranusInclinationJ2000Ed(JD);
+            },
+            UranusLongitudeAscendingNodeJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit33UranusLongitudeAscendingNodeJ2000Ed(JD);
+            },
+            UranusLongitudePerihelionJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit30UranusLongitudePerihelionJ2000Ed(JD);
+            },
 
-                NeptuneMeanLongitudeJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit25NeptuneMeanLongitudeJ2000Ed(JD);
-                },
-                NeptuneInclinationJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit23NeptuneInclinationJ2000Ed(JD);
-                },
-                NeptuneLongitudeAscendingNodeJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit34NeptuneLongitudeAscendingNodeJ2000Ed(JD);
-                },
-                NeptuneLongitudePerihelionJ2000: function (JD) { 
-                    return __ZN25CAAElementsPlanetaryOrbit31NeptuneLongitudePerihelionJ2000Ed(JD);
-                },
-
+            NeptuneMeanLongitudeJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit25NeptuneMeanLongitudeJ2000Ed(JD);
+            },
+            NeptuneInclinationJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit23NeptuneInclinationJ2000Ed(JD);
+            },
+            NeptuneLongitudeAscendingNodeJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit34NeptuneLongitudeAscendingNodeJ2000Ed(JD);
+            },
+            NeptuneLongitudePerihelionJ2000: function (JD) { 
+                return __ZN25CAAElementsPlanetaryOrbit31NeptuneLongitudePerihelionJ2000Ed(JD);
+            }
         },
         
         //* needs to be tested
