@@ -157,11 +157,29 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             // normed, in degrees
             JD2ST : function (JD) {
                 var nonNormedLST = 280.46061837 + 360.98564736629 * (JD - 2451545);
-                return nonNormedLST - 360 * Math.floor (nonNormedLST / 360)
+                return nonNormedLST - 360 * Math.floor (nonNormedLST / 360);
             },
             
+            // ST in hours and fraction of hours
             ST2NextJD : function (st, startOfDayJD) {
-                // todo ...
+                var accurracy = 1 / (24 * 3600);
+                var errorFraction = 0.95 * 1 / 24;
+
+                var jd = startOfDayJD;
+                function computeError (jd, st) {
+                    return AAJS.Date.JD2ST(jd) / 15 - st;
+                }
+                
+                var error = computeError(jd, st);
+                while (Math.abs(error) > accurracy) {
+                    if (error > 0) {
+                        error -= 24;
+                    }
+
+                    jd += Math.abs(error) * errorFraction;
+                    error = computeError(jd, st);
+                }
+                return jd;
             },
             
             JD2Date : function (JD) {
