@@ -276,6 +276,8 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                 return {"i" : HEAPF64[0], "w" : HEAPF64[1], "omega" : HEAPF64[2]};
             }
         },
+        // tested above
+        
         ElementsPlanetaryOrbit : {
             MercuryMeanLongitude: function (JD) { 
                 return __ZN25CAAElementsPlanetaryOrbit20MercuryMeanLongitudeEd(JD);
@@ -531,8 +533,6 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             }
         },
         
-        //* needs to be tested
-        /* both position and physical */
         Sun : {
             // Position.
              GeometricEclipticLongitude: function (JD,  bHighPrecision) { 
@@ -616,26 +616,12 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             DistanceToLightTime : function (distance) {
                 return __ZN13CAAElliptical19DistanceToLightTimeEd(distance);
             },
-            /*  {
-    SUN = 0,
-    MERCURY,
-    VENUS,
-    MARS,
-    JUPITER,
-    SATURN,
-    URANUS,
-    NEPTUNE,
-    PLUTO
- 
-This delegates computations to dedicated classes. Entry point to generate tables for planets.
-
- };
-*/
+           
             CalculatePlanetaryDetails :  function (jd, ellipticalObject, bHighPrecision) {
                 __ZN13CAAElliptical9CalculateEdNS_16EllipticalObjectEb(0, jd, ellipticalObject, bHighPrecision);
                 return {"ApparentGeocentricLongitude" : HEAPF64[0], "ApparentGeocentricLatitude" : HEAPF64[1], "ApparentGeocentricDistance" : HEAPF64[2],
                 "ApparentLightTime" : HEAPF64[3], "ApparentGeocentricRA" : HEAPF64[4], "ApparentGeocentricDeclination" : HEAPF64[5]};
-            },
+            }/*,
             SemiMajorAxisFromPerihelionDistance : function (q, e) {
                 ;
             },
@@ -663,8 +649,9 @@ This delegates computations to dedicated classes. Entry point to generate tables
             MinorPlanetMagnitude : function (H, delta, G, r, PhaseAngle) {
                 ;
             }
+            */
         }
-        
+
     };
 })();
 
