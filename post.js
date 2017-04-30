@@ -656,7 +656,7 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
 })();
 
 
-(function() {
+(function(AAJS) {
      // normed, in degrees
     AAJS['Date']['JD2ST'] = function (JD) {
         var nonNormedLST = 280.46061837 + 360.98564736629 * (JD - 2451545);
@@ -724,12 +724,12 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                 r = (r - M) * 60;
                 var m = Math.floor (r);
                 r = (r - m) * 60;
-                var s = this.RoundTo2Decimals(r);
+                var s = AAJS.Numerical.RoundTo2Decimals(r);
                 if (isNegative)
                     M = -M;
                 return {"Ord3" : M, "Ord2" : m, "Ord1" : s};
             }
         };
 
-})();
+})(AAJS);
 
