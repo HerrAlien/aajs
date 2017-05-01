@@ -17,6 +17,9 @@ You should have received a copy of the GNU Affero General Public License along
 with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
 
     return {
+        AllDependenciesLoaded : function () {
+            return runDependencies === 0;
+        },
         Aberration : {
             EarthVelocity : function (JD, bHighPrecision) {
                 __ZN13CAAAberration13EarthVelocityEdb(0, JD, bHighPrecision);
