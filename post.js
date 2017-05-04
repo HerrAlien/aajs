@@ -631,9 +631,9 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             MeanMotionFromSemiMajorAxis : function (a) {
                 ;
             },
-            CalculateObjectDetails (jd, ellipticalObjectElements, bHighPrecision) {
-                ;
-            },
+            CalculateObjectDetails : function(jd, bHighPrecision) {
+                __ZN13CAAElliptical9CalculateEdRK27CAAEllipticalObjectElementsb(0, jd, addressOfEllipticalObjectElements, bHighPrecision) ;
+            } ,
             InstantaneousVelocity: function (r, e) {
                 ;
             },
@@ -699,13 +699,17 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
         var Epsilon = AAJS.Nutation.TrueObliquityOfEcliptic(JD);
         return AAJS.CoordinateTransformation.Ecliptic2Equatorial(AAJS.Sun.ApparentEclipticLongitude(JD, bHighPrecision), AAJS.Sun.ApparentEclipticLatitude(JD, bHighPrecision), Epsilon);
     };
-             
-    AAJS['Sun']['Diameter'] = function (JD, bHighPrecision) {
+    
+	AAJS['Sun']['Distance'] = function (JD, bHighPrecision) {
         var coords = AAJS.Sun.EclipticRectangularCoordinatesJ2000(JD, true);
-        var r = Math.sqrt (coords.X * coords.X + coords.Y * coords.Y + coords.Z * coords.Z);
+        return Math.sqrt (coords.X * coords.X + coords.Y * coords.Y + coords.Z * coords.Z);
+    };
+	
+    AAJS['Sun']['Diameter'] = function (JD, bHighPrecision) {
+        var r = AAJS['Sun']['Distance'](JD, bHighPrecision);
         return 2 * AAJS.Diameters.SunSemidiameterA (r);
     };
-    
+    	
     AAJS['Numerical'] = {
             RoundTo1Decimal : function (n) {
                 return Math.round (n * 10) / 10;
@@ -733,6 +737,13 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                 return {"Ord3" : M, "Ord2" : m, "Ord1" : s};
             }
         };
+        
+    AAJS['Elliptical']['EccentricAnomalyFromMeanAnomaly'] = function (M, e) {
+        var E = M;
+        for (var i = 0; i < 10; i++)
+            E = M + e * Math.sin(E);
+        return E;        
+    };
 
 })(AAJS);
 
