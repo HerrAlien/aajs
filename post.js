@@ -614,7 +614,13 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                 return __ZN11CAANutation21NutationInDeclinationEdddd (ra, obliquity, nutationInLongitude, nutationInObliquity);
             }
         },
- 
+		
+		Mercury : {
+			RadiusVector : function (JD, bHighPrecision){
+				return __ZN10CAAMercury12RadiusVectorEdb (JD, bHighPrecision);
+			}
+		},
+
         Elliptical : {
             DistanceToLightTime : function (distance) {
                 return __ZN13CAAElliptical19DistanceToLightTimeEd(distance);
