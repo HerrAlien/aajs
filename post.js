@@ -621,6 +621,12 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
 			}
 		},
 
+		Venus : {
+			RadiusVector : function (JD, bHighPrecision){
+				return __ZN8CAAVenus12RadiusVectorEdb (JD, bHighPrecision);
+			}
+		},
+
         Elliptical : {
             DistanceToLightTime : function (distance) {
                 return __ZN13CAAElliptical19DistanceToLightTimeEd(distance);
