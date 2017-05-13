@@ -626,6 +626,42 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
 				return __ZN8CAAVenus12RadiusVectorEdb (JD, bHighPrecision);
 			}
 		},
+		
+		Mars : {
+			RadiusVector : function (JD, bHighPrecision){
+				return __ZN7CAAMars12RadiusVectorEdb (JD, bHighPrecision);
+			}
+		},
+		
+ 		Jupiter : {
+			RadiusVector : function (JD, bHighPrecision){
+				return __ZN10CAAJupiter12RadiusVectorEdb (JD, bHighPrecision);
+			}
+		},
+        
+ 		Saturn : {
+			RadiusVector : function (JD, bHighPrecision){
+				return __ZN9CAASaturn12RadiusVectorEdb (JD, bHighPrecision);
+			}
+		},
+        
+ 		Uranus : {
+			RadiusVector : function (JD, bHighPrecision){
+				return __ZN9CAAUranus12RadiusVectorEdb (JD, bHighPrecision);
+			}
+		},
+        
+ 		Neptune : {
+			RadiusVector : function (JD, bHighPrecision){
+				return __ZN10CAANeptune12RadiusVectorEdb (JD, bHighPrecision);
+			}
+		},
+
+		Pluto : {
+			RadiusVector : function (JD, bHighPrecision){
+				return __ZN8CAAPluto12RadiusVectorEd (JD, bHighPrecision);
+			}
+		},
 
         Elliptical : {
             DistanceToLightTime : function (distance) {
