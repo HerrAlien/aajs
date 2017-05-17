@@ -198,8 +198,8 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             GeocentricMoonSemidiameter : function (distance) {
                 return __ZN12CAADiameters26GeocentricMoonSemidiameterEd (distance);
             },
-            TopocentricMoonSemidiameter : function (distanceDelta, delta, longitude, latitide, height){
-                return __ZN12CAADiameters27TopocentricMoonSemidiameterEddddd(distanceDelta, delta, longitude, latitide, height)
+            TopocentricMoonSemidiameter : function (distanceInKm, Dec, MoonHourAngle, latitude, altitude){
+                return __ZN12CAADiameters27TopocentricMoonSemidiameterEddddd(distanceInKm, Dec, MoonHourAngle, latitude, altitude);
             },
             // this one is weird
             AsteroidDiameter : function (H, A) {
@@ -725,7 +725,12 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
 (function(AAJS) {
      // normed, in degrees
     AAJS['Date']['JD2ST'] = function (JD) {
-        var nonNormedLST = 280.46061837 + 360.98564736629 * (JD - 2451545);
+        var nonNormedST = 280.46061837 + 360.98564736629 * (JD - 2451545);
+        return nonNormedST - 360 * Math.floor (nonNormedST / 360);
+    };
+    // both in degrees
+    AAJS['Date']['LST'] = function (JD, longitude) {
+        var nonNormedLST = AAJS['Date']['JD2ST'](JD) + longitude;
         return nonNormedLST - 360 * Math.floor (nonNormedLST / 360);
     };
             
@@ -808,9 +813,32 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
         return E;        
     };
         
-    AAJS['Moon']['PositionalEphemeris'] = function (JD, latitude, longitude, altitude) {
+   AAJS['Moon']['PositionalEphemeris'] = function (JD, latitude, longitude) {
+        var L = AAJS.Moon.EclipticLongitude(JD);
+        var B = AAJS.Moon.EclipticLatitude(JD);
+        var Epsilon = AAJS.Nutation.TrueObliquityOfEcliptic(JD);
         
+        var geocentricCoordinates = AAJS.CoordinateTransformation.Ecliptic2Equatorial(L, B, Epsilon); // 20.255666666666666666666666666667, -17.48
+        
+        var LST = AAJS.Date.LST (JD, longitude) / 15; // in hours
+        var HA = LST - geocentricCoordinates.X;
+        HA = HA * 15 * Math.PI / 180;
+        
+        var gclat = latitude - 0.1924 * Math.sin (2 * latitude * Math.PI/180);
+        gclat = gclat * Math.PI/180;
+        var rho = 0.99833 + 0.00167 * Math.cos (2 * latitude * Math.PI/180);
+        
+        var g = Math.atan (Math.tan (gclat) / Math.cos (HA));
+        var r = AAJS.Moon.RadiusVector(JD);
+        var horizontalParallaxDeg  = AAJS.Moon.RadiusVectorToHorizontalParallax(r); // radius in km, parallax in degrees
+        var horizontalParallax = horizontalParallaxDeg * Math.PI / 180;
+        return {
+            "RA" : geocentricCoordinates.X - horizontalParallax * rho * Math.cos(gclat) * Math.sin(HA) / Math.cos(geocentricCoordinates.Y * Math.PI/180) * 180 / (Math.PI * 15),
+            "Dec" : geocentricCoordinates.Y - horizontalParallax * rho * Math.sin(gclat) * Math.sin(g - geocentricCoordinates.Y * Math.PI/180) / Math.sin(g) * 180 / Math.PI,
+            "parallax" : horizontalParallaxDeg,
+            "diameter": AAJS.Diameters.TopocentricMoonSemidiameter(r, geocentricCoordinates.Y, LST - geocentricCoordinates.X, latitude, 0)/1800
+        };
     };
-
+ 
 })(AAJS)
 
