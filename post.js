@@ -828,13 +828,20 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             E = M + e * Math.sin(E);
         return E;        
     };
-        
-   AAJS['Moon']['PositionalEphemeris'] = function (JD, latitude, longitude, height) {
+    
+    AAJS['Moon']['GeocentricEquatorialPosition'] = function (JD) {
         var L = AAJS.Moon.EclipticLongitude(JD);
         var B = AAJS.Moon.EclipticLatitude(JD);
         var Epsilon = AAJS.Nutation.TrueObliquityOfEcliptic(JD);
         
-        var geocentricCoordinates = AAJS.CoordinateTransformation.Ecliptic2Equatorial(L, B, Epsilon); // 20.255666666666666666666666666667, -17.48
+        var geocentricCoordinates = AAJS.CoordinateTransformation.Ecliptic2Equatorial(L, B, Epsilon); 
+        
+        return { "X" : geocentricCoordinates.X, "Y" : geocentricCoordinates.Y };
+    };
+        
+   AAJS['Moon']['PositionalEphemeris'] = function (JD, latitude, longitude, height) {
+        
+        var geocentricCoordinates = AAJS['Moon']['GeocentricEquatorialPosition'](JD);
         
         var LST = AAJS.Date.LST (JD, longitude) / 15; // in hours
         var HA = LST - geocentricCoordinates.X;
