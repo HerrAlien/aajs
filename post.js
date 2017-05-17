@@ -701,6 +701,21 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                 ;
             }
             */
+        },
+        
+        Moon : {
+            MeanLongitude: function (JD) { return __ZN7CAAMoon13MeanLongitudeEd(JD); },
+            MeanElongation: function (JD) { return __ZN7CAAMoon14MeanElongationEd(JD); },
+            MeanAnomaly: function (JD) { return __ZN7CAAMoon11MeanAnomalyEd(JD); },
+            ArgumentOfLatitude: function (JD) { return __ZN7CAAMoon18ArgumentOfLatitudeEd(JD); },
+            MeanLongitudeAscendingNode: function (JD) { return __ZN7CAAMoon26MeanLongitudeAscendingNodeEd(JD); },
+            MeanLongitudePerigee: function (JD) { return  __ZN7CAAMoon20MeanLongitudePerigeeEd(JD); },
+            TrueLongitudeAscendingNode: function ( JD) { return __ZN7CAAMoon26TrueLongitudeAscendingNodeEd(JD); },
+            EclipticLongitude: function ( JD) { return __ZN7CAAMoon17EclipticLongitudeEd(JD); },
+            EclipticLatitude: function ( JD) { return __ZN7CAAMoon16EclipticLatitudeEd(JD); },
+            RadiusVector: function ( JD) { return __ZN7CAAMoon12RadiusVectorEd (JD); },
+            RadiusVectorToHorizontalParallax: function ( RadiusVector) { return __ZN7CAAMoon32RadiusVectorToHorizontalParallaxEd (RadiusVector); },
+            HorizontalParallaxToRadiusVector: function ( Parallax) { return __ZN7CAAMoon32HorizontalParallaxToRadiusVectorEd(JD); }
         }
 
     };
@@ -792,6 +807,10 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             E = M + e * Math.sin(E);
         return E;        
     };
+        
+    AAJS['Moon']['PositionalEphemeris'] = function (JD, latitude, longitude, altitude) {
+        
+    };
 
-})(AAJS);
+})(AAJS)
 
