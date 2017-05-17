@@ -751,7 +751,7 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
 (function(AAJS) {
  
     AAJS['Date']['LST'] = function (JD, longitude) {
-        var nonNormedLST = AAJS.Sidereal.ApparentGreenwichSiderealTime(JD) + longitude;
+        var nonNormedLST = AAJS.Sidereal.ApparentGreenwichSiderealTime(JD) * 15 + longitude;
         return nonNormedLST - 360 * Math.floor (nonNormedLST / 360);
     };
             
@@ -760,7 +760,7 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
         var accurracy = 1 / (24 * 3600);
         var errorFraction = 0.95 * 1 / 24;
         var jd = startOfDayJD;
-        var error = AAJS.Date.JD2ST(jd) / 15 - st;
+        var error = AAJS.Sidereal.ApparentGreenwichSiderealTime(jd) - st;
                     
         while (Math.abs(error) > accurracy) {
             if (error > 0) {
@@ -768,7 +768,7 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             }
 
             jd += Math.abs(error) * errorFraction;
-            error = AAJS.Date.JD2ST(jd) / 15 - st;
+            error = AAJS.Sidereal.ApparentGreenwichSiderealTime(jd) - st;
             }
         return jd;
     };
