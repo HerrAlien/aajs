@@ -725,6 +725,13 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             RadiusTimesSineGeocentricLatitude : function (latitude, height) {
                 return __ZN8CAAGlobe16RhoSinThetaPrimeEdd(latitude, height);
             }
+        },
+        
+        Precession : {
+            PrecessEcliptic : function (L, B, JD0, JD) {
+                __ZN13CAAPrecession15PrecessEclipticEdddd(0, L, B, JD0, JD);
+                return { "X" : HEAPF64[0], "Y" : HEAPF64[1] };
+            }
         }
 
     };
