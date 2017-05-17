@@ -732,6 +732,16 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                 __ZN13CAAPrecession15PrecessEclipticEdddd(0, L, B, JD0, JD);
                 return { "X" : HEAPF64[0], "Y" : HEAPF64[1] };
             }
+        },
+        
+        Sidereal : {
+            MeanGreenwichSiderealTime: function (JD) {
+                return __ZN11CAASidereal25MeanGreenwichSiderealTimeEd(JD);
+            },
+            
+            ApparentGreenwichSiderealTime : function (JD) {
+                return __ZN11CAASidereal29ApparentGreenwichSiderealTimeEd(JD);
+            }
         }
 
     };
@@ -739,14 +749,9 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
 
 
 (function(AAJS) {
-     // normed, in degrees
-    AAJS['Date']['JD2ST'] = function (JD) {
-        var nonNormedST = 280.46061837 + 360.98564736629 * (JD - 2451545);
-        return nonNormedST - 360 * Math.floor (nonNormedST / 360);
-    };
-    // both in degrees
+ 
     AAJS['Date']['LST'] = function (JD, longitude) {
-        var nonNormedLST = AAJS['Date']['JD2ST'](JD) + longitude;
+        var nonNormedLST = AAJS.Sidereal.ApparentGreenwichSiderealTime(JD) + longitude;
         return nonNormedLST - 360 * Math.floor (nonNormedLST / 360);
     };
             
