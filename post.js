@@ -749,6 +749,11 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
 
 /** Extensions to the C++ functionality */
 (function(AAJS) {
+
+    AAJS['Constants'] = {
+        'rad2deg' : 180/Math.PI,
+        'deg2rad' : Math.PI/180
+    };
  
     AAJS['Date']['LST'] = function (JD, longitude) {
         var nonNormedLST = AAJS.Sidereal.ApparentGreenwichSiderealTime(JD) * 15 + longitude;
@@ -837,9 +842,9 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
     AAJS['Globe']['EquatorialGeocentricToTopocentric'] = function (RaGeo, DecGeo, parallaxDegrees, JD, latitude, longitude, altitude) {
         var LST = AAJS.Date.LST (JD, longitude) / 15; // in hours
         var HA = LST - RaGeo;
-        HA = HA * 15 * Math.PI / 180;
-        var DecGeoRads = DecGeo * Math.PI / 180;
-        var parallax = parallaxDegrees *  Math.PI / 180;
+        HA = HA * 15 * AAJS.Constants.deg2rad;
+        var DecGeoRads = DecGeo * AAJS.Constants.deg2rad;
+        var parallax = parallaxDegrees *  AAJS.Constants.deg2rad;
 
         var rCosPhi = AAJS.Globe.RadiusTimesCosineGeocentricLatitude (latitude, altitude);
         var rSinPhi = AAJS.Globe.RadiusTimesSineGeocentricLatitude (latitude, altitude);
@@ -847,8 +852,8 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
         var g = Math.atan ((rSinPhi / rCosPhi) / Math.cos (HA));
         
         return {
-            "X" : RaGeo - parallax * rCosPhi * Math.sin(HA) / Math.cos(DecGeoRads) * 180 / (Math.PI * 15),
-            "Y" : DecGeo - parallax * rSinPhi * Math.sin(g - DecGeoRads) / Math.sin(g) * 180 / Math.PI
+            "X" : RaGeo - parallax * rCosPhi * Math.sin(HA) / Math.cos(DecGeoRads) * AAJS.Constants.rad2deg / 15,
+            "Y" : DecGeo - parallax * rSinPhi * Math.sin(g - DecGeoRads) / Math.sin(g) * AAJS.Constants.rad2deg
         };
     };
     
@@ -868,12 +873,13 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
         var r = AAJS.Moon.RadiusVector(JD);
         var horizontalParallaxDeg  = AAJS.Moon.RadiusVectorToHorizontalParallax(r); // radius in km, parallax in degrees
         var topoCoords = AAJS['Globe']['EquatorialGeocentricToTopocentric'] (geocentricCoordinates.X, geocentricCoordinates.Y, horizontalParallaxDeg, JD, latitude, longitude, height);
+        var LST = AAJS.Date.LST (JD, longitude) / 15; // in hours
          
         return {
             "RA" : topoCoords.X,
             "Dec" : topoCoords.Y,
             "parallax" : horizontalParallaxDeg,
-            "diameter": AAJS.Diameters.TopocentricMoonSemidiameter(r, geocentricCoordinates.Y, LST - geocentricCoordinates.X, latitude, height)/1800
+            "diameter": AAJS.Diameters.TopocentricMoonSemidiameter(r, topoCoords.Y, LST - topoCoords.X, latitude, height)/1800
         };
     };
     
