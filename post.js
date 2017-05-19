@@ -857,6 +857,8 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
         };
     };
     
+    AAJS['Globe']['Radius'] = 6378.14;
+    
     AAJS['Moon']['GeocentricEquatorialPosition'] = function (JD) {
         var L = AAJS.Moon.EclipticLongitude(JD);
         var B = AAJS.Moon.EclipticLatitude(JD);
@@ -872,14 +874,41 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
         var geocentricCoordinates = AAJS['Moon']['GeocentricEquatorialPosition'](JD);
         var r = AAJS.Moon.RadiusVector(JD);
         var horizontalParallaxDeg  = AAJS.Moon.RadiusVectorToHorizontalParallax(r); // radius in km, parallax in degrees
-        var topoCoords = AAJS['Globe']['EquatorialGeocentricToTopocentric'] (geocentricCoordinates.X, geocentricCoordinates.Y, horizontalParallaxDeg, JD, latitude, longitude, height);
-        var LST = AAJS.Date.LST (JD, longitude) / 15; // in hours
+        
+        var DecGeo = geocentricCoordinates.Y * AAJS.Constants.deg2rad;
+        var RaGeo = geocentricCoordinates.X * 15 * AAJS.Constants.deg2rad;
+        
+        var Zgeo = r * Math.sin(DecGeo);
+        var Xgeo = r * Math.cos(DecGeo)* Math.cos(RaGeo);
+        var Ygeo = r * Math.cos(DecGeo)* Math.sin(RaGeo);
+        
+        var rCosPhi = AAJS.Globe.RadiusTimesCosineGeocentricLatitude (latitude, height);
+        var rSinPhi = AAJS.Globe.RadiusTimesSineGeocentricLatitude (latitude, height);
+        var LST = AAJS.Date.LST (JD, longitude) * AAJS.Constants.deg2rad;
+
+        var Zobs = AAJS.Globe.Radius * rSinPhi;
+        var Xobs = AAJS.Globe.Radius * rCosPhi * Math.cos(LST);
+        var Yobs = AAJS.Globe.Radius * rCosPhi * Math.sin(LST);
+        
+        var Ztopo = Zgeo - Zobs;
+        var Xtopo = Xgeo - Xobs;
+        var Ytopo = Ygeo - Yobs;
+        
+        LST = LST * AAJS.Constants.rad2deg / 15; // in hours
+        
+        var RaTopo = Math.atan2(Ytopo, Xtopo) * AAJS.Constants.rad2deg;
+        if (RaTopo < 0)
+            RaTopo += 360;
+
+        RaTopo /= 15;
+        var DecTopo = Math.atan(Ztopo/Math.sqrt(Xtopo * Xtopo + Ytopo * Ytopo))* AAJS.Constants.rad2deg;
          
         return {
-            "RA" : topoCoords.X,
-            "Dec" : topoCoords.Y,
+            "RA" : RaTopo,
+            "Dec" : DecTopo,
             "parallax" : horizontalParallaxDeg,
-            "diameter": AAJS.Diameters.TopocentricMoonSemidiameter(r, topoCoords.Y, LST - topoCoords.X, latitude, height)/1800
+            "R" : r / AAJS.Globe.Radius,
+            "diameter": AAJS.Diameters.TopocentricMoonSemidiameter(r, DecTopo, LST - RaTopo, latitude, height)/1800
         };
     };
     
