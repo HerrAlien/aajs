@@ -904,8 +904,10 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
         var DecTopo = Math.atan(Ztopo/Math.sqrt(Xtopo * Xtopo + Ytopo * Ytopo))* AAJS.Constants.rad2deg;
          
         return {
-            "RA" : RaTopo,
-            "Dec" : DecTopo,
+            "RaTopo" : RaTopo,
+            "DecTopo" : DecTopo,
+            "RaGeo" : geocentricCoordinates.X,
+            "DecGeo" : geocentricCoordinates.Y,
             "parallax" : horizontalParallaxDeg,
             "R" : r / AAJS.Globe.Radius,
             "diameter": AAJS.Diameters.TopocentricMoonSemidiameter(r, DecTopo, LST - RaTopo, latitude, height)/1800
