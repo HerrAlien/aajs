@@ -636,6 +636,11 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
  		Jupiter : {
 			RadiusVector : function (JD, bHighPrecision){
 				return __ZN10CAAJupiter12RadiusVectorEdb (JD, bHighPrecision);
+			},
+            
+            PhysicalDetails : function (JD, bHighPrecision){
+                __ZN18CAAPhysicalJupiter9CalculateEdb(0, JD, bHighPrecision);
+                return {"EarthDeclination" : HEAPF64[0], "SunDeclination" : HEAPF64[1], "CentralMeridianGeometricLongitude_System1" : HEAPF64[2], "CentralMeridianGeometricLongitude_System2" : HEAPF64[3], "CentralMeridianGeometricApparent_System1" : HEAPF64[4], "CentralMeridianGeometricApparent_System2" : HEAPF64[5], "P" : HEAPF64[6] };
 			}
 		},
         
@@ -778,6 +783,24 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
         return jd;
     };
     
+    // ST in hours and fraction of hours
+    AAJS['Date']['LST2NextJD'] = function (lst, startOfDayJD, longitude) {
+        var accurracy = 1 / (24 * 3600);
+        var errorFraction = 0.95 * 1 / 24;
+        var jd = startOfDayJD;
+        var error = AAJS['Date']['LST'](jd, longitude)/15 - lst;
+                    
+        while (Math.abs(error) > accurracy) {
+            if (error > 0) {
+                error -= 24;
+            }
+
+            jd += Math.abs(error) * errorFraction;
+            error = AAJS['Date']['LST'](jd, longitude)/15 - lst;
+            }
+        return jd;
+    };
+
     AAJS['Date']['JD2Date'] = function (jd) {
         var	j1, j2, j3, j4, j5;			//scratch
 
