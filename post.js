@@ -879,20 +879,6 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             ToSexagesimal : function (numericalValue) {
                 var isNegative  = numericalValue < 0;
                 numericalValue = Math.abs(numericalValue);
-                var r = numericalValue;
-                var M = Math.floor(r);
-                r = (r - M) * 60;
-                var m = Math.floor (r);
-                r = (r - m) * 60;
-                var s = AAJS.Numerical.RoundTo2Decimals(r);
-                if (isNegative)
-                    M = -M;
-                return {"Ord3" : M, "Ord2" : m, "Ord1" : s};
-            },
-            
-            ToSexagesimal2 : function (numericalValue) {
-                var isNegative  = numericalValue < 0;
-                numericalValue = Math.abs(numericalValue);
                 
                 var s = AAJS.Numerical.RoundTo3Decimals(numericalValue * 3600 - 60 * Math.floor(numericalValue * 60));
                 var m = Math.floor(numericalValue * 60 - 60 * Math.floor(numericalValue));
