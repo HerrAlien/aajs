@@ -888,7 +888,21 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                 if (isNegative)
                     M = -M;
                 return {"Ord3" : M, "Ord2" : m, "Ord1" : s};
+            },
+            
+            ToSexagesimal2 : function (numericalValue) {
+                var isNegative  = numericalValue < 0;
+                numericalValue = Math.abs(numericalValue);
+                
+                var s = AAJS.Numerical.RoundTo3Decimals(numericalValue * 3600 - 60 * Math.floor(numericalValue * 60));
+                var m = Math.floor(numericalValue * 60 - 60 * Math.floor(numericalValue));
+                var d = Math.floor(numericalValue);
+                if (isNegative)
+                    d = -d;
+                
+                return {"Ord3" : d, "Ord2" : m, "Ord1" : s};
             }
+
         };
         
     AAJS['Elliptical']['EccentricAnomalyFromMeanAnomaly'] = function (M, e) {
