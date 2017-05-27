@@ -891,7 +891,7 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                 var m = Math.floor(numericalValue * 60 - 60 * Math.floor(numericalValue));
                 var d = Math.floor(numericalValue);
                 if (isNegative)
-                    d = -d;
+                    d = "-" + d;
                 
                 return {"Ord3" : d, "Ord2" : m, "Ord1" : s};
             }
