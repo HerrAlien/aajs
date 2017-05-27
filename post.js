@@ -630,6 +630,13 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
 		Mars : {
 			RadiusVector : function (JD, bHighPrecision){
 				return __ZN7CAAMars12RadiusVectorEdb (JD, bHighPrecision);
+			},
+            PhysicalDetails : function (JD, bHighPrecision){
+                __ZN15CAAPhysicalMars9CalculateEdb(0, JD, bHighPrecision);
+                return { "EarthDeclination" : HEAPF64[0], 
+                "SunDeclination" : HEAPF64[1], 
+                "CentralMeridianLongitude" : HEAPF64[2],
+                "P" : HEAPF64[3] };
 			}
 		},
 		
@@ -640,7 +647,7 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             
             PhysicalDetails : function (JD, bHighPrecision){
                 __ZN18CAAPhysicalJupiter9CalculateEdb(0, JD, bHighPrecision);
-                return {"EarthDeclination" : HEAPF64[0], "SunDeclination" : HEAPF64[1], "CentralMeridianGeometricLongitude_System1" : HEAPF64[2], "CentralMeridianGeometricLongitude_System2" : HEAPF64[3], "CentralMeridianGeometricApparent_System1" : HEAPF64[4], "CentralMeridianGeometricApparent_System2" : HEAPF64[5], "P" : HEAPF64[6] };
+                return {"EarthDeclination" : HEAPF64[0], "SunDeclination" : HEAPF64[1], "CentralMeridianGeometricLongitude_System1" : HEAPF64[2], "CentralMeridianGeometricLongitude_System2" : HEAPF64[3], "CentralMeridianApparentLongitude_System1" : HEAPF64[4], "CentralMeridianApparentLongitude_System2" : HEAPF64[5], "P" : HEAPF64[6] };
 			}
 		},
         
