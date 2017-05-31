@@ -754,7 +754,64 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             ApparentGreenwichSiderealTime : function (JD) {
                 return __ZN11CAASidereal29ApparentGreenwichSiderealTimeEd(JD);
             }
-        }
+        },
+        
+        GalileanMoons : {
+            Calculate : function (JD, bHighPrecision) {
+                __ZN16CAAGalileanMoons9CalculateEdb (0, JD, bHighPrecision);
+
+                return [
+                    {   "MeanLongitude" : HEAPF64[0], 
+                        "TrueLongitude" : HEAPF64[1], 
+                        "TropicalLongitude" : HEAPF64[2],
+                        "EquatorialLatitude" : HEAPF64[3],
+                        "r" : HEAPF64[4],
+                        "TrueRectangularCoordinates" : {"X" : HEAPF64[5], "Y" : HEAPF64[6], "Z" :  HEAPF64[7]},
+                        "ApparentRectangularCoordinates" : {"X" : HEAPF64[8], "Y" : HEAPF64[9], "Z" :  HEAPF64[10]},
+                        "bInTransit" : HEAP8[88],
+                        "bInOccultation" : HEAP8[89],
+                        "bInEclipse" : HEAP8[90],
+                        "bInShadowTransit" : HEAP8[91]
+                    },
+                    {   "MeanLongitude" : HEAPF64[12], 
+                        "TrueLongitude" : HEAPF64[13], 
+                        "TropicalLongitude" : HEAPF64[14],
+                        "EquatorialLatitude" : HEAPF64[15],
+                        "r" : HEAPF64[16],
+                        "TrueRectangularCoordinates" : {"X" : HEAPF64[17], "Y" : HEAPF64[18], "Z" :  HEAPF64[19]},
+                        "ApparentRectangularCoordinates" : {"X" : HEAPF64[20], "Y" : HEAPF64[21], "Z" :  HEAPF64[22]},
+                        "bInTransit" : HEAP8[184],
+                        "bInOccultation" : HEAP8[185],
+                        "bInEclipse" : HEAP8[186],
+                        "bInShadowTransit" : HEAP8[187]
+                    },
+                    {   "MeanLongitude" : HEAPF64[24], 
+                        "TrueLongitude" : HEAPF64[25], 
+                        "TropicalLongitude" : HEAPF64[26],
+                        "EquatorialLatitude" : HEAPF64[27],
+                        "r" : HEAPF64[28],
+                        "TrueRectangularCoordinates" : {"X" : HEAPF64[29], "Y" : HEAPF64[30], "Z" :  HEAPF64[31]},
+                        "ApparentRectangularCoordinates" : {"X" : HEAPF64[32], "Y" : HEAPF64[33], "Z" :  HEAPF64[34]},
+                        "bInTransit" : HEAP8[280],
+                        "bInOccultation" : HEAP8[281],
+                        "bInEclipse" : HEAP8[282],
+                        "bInShadowTransit" : HEAP8[283]
+                    },
+                    {   "MeanLongitude" : HEAPF64[36], 
+                        "TrueLongitude" : HEAPF64[37], 
+                        "TropicalLongitude" : HEAPF64[38],
+                        "EquatorialLatitude" : HEAPF64[39],
+                        "r" : HEAPF64[40],
+                        "TrueRectangularCoordinates" : {"X" : HEAPF64[41], "Y" : HEAPF64[42], "Z" :  HEAPF64[43]},
+                        "ApparentRectangularCoordinates" : {"X" : HEAPF64[44], "Y" : HEAPF64[45], "Z" :  HEAPF64[46]},
+                        "bInTransit" : HEAP8[376],
+                        "bInOccultation" : HEAP8[377],
+                        "bInEclipse" : HEAP8[378],
+                        "bInShadowTransit" : HEAP8[379]
+                    }
+                ];
+            }
+        },
 
     };
 })();
