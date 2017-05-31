@@ -760,8 +760,8 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             Calculate : function (JD, bHighPrecision) {
                 __ZN16CAAGalileanMoons9CalculateEdb (0, JD, bHighPrecision);
 
-                return [
-                    {   "MeanLongitude" : HEAPF64[0], 
+                return {
+                    "Io" : {   "MeanLongitude" : HEAPF64[0], 
                         "TrueLongitude" : HEAPF64[1], 
                         "TropicalLongitude" : HEAPF64[2],
                         "EquatorialLatitude" : HEAPF64[3],
@@ -773,7 +773,7 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                         "bInEclipse" : HEAP8[90],
                         "bInShadowTransit" : HEAP8[91]
                     },
-                    {   "MeanLongitude" : HEAPF64[12], 
+                    "Europa" : {   "MeanLongitude" : HEAPF64[12], 
                         "TrueLongitude" : HEAPF64[13], 
                         "TropicalLongitude" : HEAPF64[14],
                         "EquatorialLatitude" : HEAPF64[15],
@@ -785,7 +785,7 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                         "bInEclipse" : HEAP8[186],
                         "bInShadowTransit" : HEAP8[187]
                     },
-                    {   "MeanLongitude" : HEAPF64[24], 
+                    "Ganymede" : {   "MeanLongitude" : HEAPF64[24], 
                         "TrueLongitude" : HEAPF64[25], 
                         "TropicalLongitude" : HEAPF64[26],
                         "EquatorialLatitude" : HEAPF64[27],
@@ -797,7 +797,7 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                         "bInEclipse" : HEAP8[282],
                         "bInShadowTransit" : HEAP8[283]
                     },
-                    {   "MeanLongitude" : HEAPF64[36], 
+                    "Callisto" : {   "MeanLongitude" : HEAPF64[36], 
                         "TrueLongitude" : HEAPF64[37], 
                         "TropicalLongitude" : HEAPF64[38],
                         "EquatorialLatitude" : HEAPF64[39],
@@ -809,7 +809,7 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                         "bInEclipse" : HEAP8[378],
                         "bInShadowTransit" : HEAP8[379]
                     }
-                ];
+                };
             }
         },
 
