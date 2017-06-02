@@ -812,7 +812,65 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                 };
             }
         },
+        
+        SaturnMoons : {
+            // __ZN14CAASaturnMoons9CalculateEdb
+            Calculate : function (JD, bHighPrecision) {
+                __ZN14CAASaturnMoons9CalculateEdb (0, JD, bHighPrecision);
 
+                return {
+                    "Mimas" : {   
+                        "TrueRectangularCoordinates" : {"X" : HEAPF64[0], "Y" : HEAPF64[1], "Z" :  HEAPF64[2]},
+                        "ApparentRectangularCoordinates" : {"X" : HEAPF64[3], "Y" : HEAPF64[4], "Z" :  HEAPF64[5]},
+                        "bInTransit" : HEAP8[48],
+                        "bInOccultation" : HEAP8[49],
+                        "bInEclipse" : HEAP8[50],
+                        "bInShadowTransit" : HEAP8[51]
+                    },
+                    "Enceladus" : {  
+                        "TrueRectangularCoordinates" : {"X" : HEAPF64[7], "Y" : HEAPF64[8], "Z" :  HEAPF64[9]},
+                        "ApparentRectangularCoordinates" : {"X" : HEAPF64[10], "Y" : HEAPF64[11], "Z" :  HEAPF64[12]},
+                        "bInTransit" : HEAP8[104],
+                        "bInOccultation" : HEAP8[105],
+                        "bInEclipse" : HEAP8[106],
+                        "bInShadowTransit" : HEAP8[107]
+                    },
+                    "Tethys" : {   
+                        "TrueRectangularCoordinates" : {"X" : HEAPF64[14], "Y" : HEAPF64[15], "Z" :  HEAPF64[16]},
+                        "ApparentRectangularCoordinates" : {"X" : HEAPF64[17], "Y" : HEAPF64[18], "Z" :  HEAPF64[19]},
+                        "bInTransit" : HEAP8[160],
+                        "bInOccultation" : HEAP8[161],
+                        "bInEclipse" : HEAP8[162],
+                        "bInShadowTransit" : HEAP8[163]
+                    },
+                    "Dione" : {  
+                        "TrueRectangularCoordinates" : {"X" : HEAPF64[21], "Y" : HEAPF64[22], "Z" :  HEAPF64[23]},
+                        "ApparentRectangularCoordinates" : {"X" : HEAPF64[24], "Y" : HEAPF64[25], "Z" :  HEAPF64[26]},
+                        "bInTransit" : HEAP8[216],
+                        "bInOccultation" : HEAP8[217],
+                        "bInEclipse" : HEAP8[218],
+                        "bInShadowTransit" : HEAP8[219]
+                    },
+                    "Rhea" : {  
+                        "TrueRectangularCoordinates" : {"X" : HEAPF64[28], "Y" : HEAPF64[29], "Z" :  HEAPF64[30]},
+                        "ApparentRectangularCoordinates" : {"X" : HEAPF64[31], "Y" : HEAPF64[32], "Z" :  HEAPF64[33]},
+                        "bInTransit" : HEAP8[272],
+                        "bInOccultation" : HEAP8[273],
+                        "bInEclipse" : HEAP8[274],
+                        "bInShadowTransit" : HEAP8[275]
+                    },
+                    "Titan" : {  
+                        "TrueRectangularCoordinates" : {"X" : HEAPF64[35], "Y" : HEAPF64[36], "Z" :  HEAPF64[37]},
+                        "ApparentRectangularCoordinates" : {"X" : HEAPF64[38], "Y" : HEAPF64[39], "Z" :  HEAPF64[40]},
+                        "bInTransit" : HEAP8[328],
+                        "bInOccultation" : HEAP8[329],
+                        "bInEclipse" : HEAP8[330],
+                        "bInShadowTransit" : HEAP8[331]
+                    }
+                    
+                };
+            }
+        },
     };
 })();
 
