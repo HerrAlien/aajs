@@ -727,7 +727,12 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             EclipticLatitude: function ( JD) { return __ZN7CAAMoon16EclipticLatitudeEd(JD); },
             RadiusVector: function ( JD) { return __ZN7CAAMoon12RadiusVectorEd (JD); },
             RadiusVectorToHorizontalParallax: function ( RadiusVector) { return __ZN7CAAMoon32RadiusVectorToHorizontalParallaxEd (RadiusVector); },
-            HorizontalParallaxToRadiusVector: function ( Parallax) { return __ZN7CAAMoon32HorizontalParallaxToRadiusVectorEd(JD); }
+            HorizontalParallaxToRadiusVector: function ( Parallax) { return __ZN7CAAMoon32HorizontalParallaxToRadiusVectorEd(JD); },
+            // physical
+            CalculateSelenographicPositionOfSun : function (JD, highPrecision) {
+                __ZN15CAAPhysicalMoon35CalculateSelenographicPositionOfSunEdb (0, JD, highPrecision);
+                return { "l0" : HEAPF64[0], "b0" : HEAPF64[1], "c0" : HEAPF64[2] };
+            }
         },
         
         Globe : {

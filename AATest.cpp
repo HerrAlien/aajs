@@ -21,7 +21,7 @@ int main()
 //    printGallileanSatellites(CAAGalileanMoons::Calculate(CAADate::DateToJD(2017, 5, 2, true), true));
 
 //    printGallileanSatellites(CAAGalileanMoons::Calculate(2453037.05903, true));
-	printSaturnSatellites(CAASaturnMoons::Calculate(CAADate::DateToJD(2017, 5, 2, true)));
+	printSaturnSatellites(CAASaturnMoons::Calculate(CAADate::DateToJD(2017, 5, 2, true), false));
 
 //Calculate the Eclipse Disappearance of Satellite 1 on February 1 2004 at 13:32 UCT
     double JD = 2453037.05903;
