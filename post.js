@@ -1100,6 +1100,11 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
         };
     };
     
+    AAJS['Moon']['SiderealPeriodEpochJD'] = 2451544.5 + 0.03*365.25;
+    
+    AAJS['Moon']['kForJD'] = function (JD) {
+        return 13.3686*(JD - AAJS.Moon.SiderealPeriodEpochJD);
+    }
  
-})(AAJS)
+})(AAJS);
 
