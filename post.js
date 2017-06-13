@@ -876,6 +876,25 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                 };
             }
         },
+        Eclipses : {
+            CalculateLunar : function (k) {
+                __ZN11CAAEclipses14CalculateLunarEd (0, k);
+                return {
+                  "bEclipse" : HEAP8[0],
+                  "TimeOfMaximumEclipse" : HEAPF64[1],
+                  "F" : HEAPF64[2],
+                  "u" : HEAPF64[3],
+                  "gamma" : HEAPF64[4],
+                  "PenumbralRadii" : HEAPF64[5],
+                  "UmbralRadii" : HEAPF64[6],
+                  "PenumbralMagnitude" : HEAPF64[7],
+                  "UmbralMagnitude" : HEAPF64[8],
+                  "PartialPhaseSemiDuration" : HEAPF64[9],
+                  "TotalPhaseSemiDuration" : HEAPF64[10],
+                  "PartialPhasePenumbraSemiDuration" : HEAPF64[11]
+                };
+            }
+        }
     };
 })();
 
@@ -1103,11 +1122,11 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
     AAJS['Moon']['SiderealPeriodEpochJD'] = 2451544.5 + 0.03*365.25;
     
     AAJS['Moon']['kForJD'] = function (JD) {
-        return (JD - AAJS.Moon.SiderealPeriodEpochJD) / 13.3686;
+        return 12.3685 * (JD - AAJS['Moon']['SiderealPeriodEpochJD'])/365.25;
     };
     
     AAJS['Moon']['JDforK'] = function (k) {
-        return k * 13.3686 + AAJS.Moon.SiderealPeriodEpochJD;
+        return k * 12.3685 + AAJS.Moon.SiderealPeriodEpochJD;
     };
  
 })(AAJS);
