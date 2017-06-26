@@ -894,6 +894,28 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                   "PartialPhasePenumbraSemiDuration" : HEAPF64[11]
                 };
             }
+        },
+        RiseTransitSet : {
+            /**
+                @param yesterdayRA, RA, tomorrowRA need to be expressed in hours and minutes
+                @param yesterdayDEC, DEC, tomorrowDEC need to be expressed in degrees
+                @param Longitude, Latitude need to be expressed in degrees
+                @param h0: -0.5667 degrees for stars and planets
+                           -0.8333 degrees for the Sun
+                           0.7275 * parallax - 0.566666 degrees for the Moon
+            */
+            Calculate : function (jd, yesterdayRA, yesterdayDEC, RA, DEC, tomorrowRA, tomorrowDEC, Longitude, Latitude, h0) {
+                __ZN17CAARiseTransitSet9CalculateEdddddddddd (0, jd, yesterdayRA, yesterdayDEC, RA, DEC, tomorrowRA, tomorrowDEC, Longitude, Latitude, h0);
+                return {
+                        "bRiseValid" : HEAP8[0],
+                        "Rise" : HEAPF64[1],
+                        "bTransitValid" : HEAP8[16],
+                        "bTransitAboveHorizon" : HEAP8[17],
+                        "Transit" : HEAPF64[3],
+                        "bSetValid" : HEAP8[32],
+                        "Set" : HEAPF64[5]
+                };
+            }
         }
     };
 })();

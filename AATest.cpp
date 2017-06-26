@@ -9,25 +9,47 @@ void printGallileanSatellite(const CAAGalileanMoonDetail& moon);
 void printGallileanSatellites(const CAAGalileanMoonsDetails& moon);
 void printSaturnSatellites(const CAASaturnMoonsDetails & details);
 void printSaturnSatellite(const CAASaturnMoonDetail& moon);
+void printRiseTransitSet(const CAARiseTransitSetDetails & rts);
 
 #define UNREFERENCED_PARAMETER
 
 int main()
 {
 
+    const double JD = CAADate::DateToJD(1988, 3, 20, true);
+    const auto yesterday = CAAElliptical::Calculate(JD - 1, CAAElliptical::VENUS, true);
+    const auto today = CAAElliptical::Calculate(JD , CAAElliptical::VENUS, true);
+    const auto tomorrow = CAAElliptical::Calculate(JD + 1, CAAElliptical::VENUS, true);
+
+    const auto rts = CAARiseTransitSet::Calculate(JD,
+        yesterday.ApparentGeocentricRA ,
+        yesterday.ApparentGeocentricDeclination,
+        today.ApparentGeocentricRA ,
+        today.ApparentGeocentricDeclination,
+        tomorrow.ApparentGeocentricRA ,
+        tomorrow.ApparentGeocentricDeclination,
+        71.0833,
+        42.3333,
+        -0.5667);
+
     cout.precision(15);
-	cout << fixed;
-
-//    printGallileanSatellites(CAAGalileanMoons::Calculate(CAADate::DateToJD(2017, 5, 2, true), true));
-
-//    printGallileanSatellites(CAAGalileanMoons::Calculate(2453037.05903, true));
-	printSaturnSatellites(CAASaturnMoons::Calculate(CAADate::DateToJD(2017, 5, 2, true), false));
-
-//Calculate the Eclipse Disappearance of Satellite 1 on February 1 2004 at 13:32 UCT
-    double JD = 2453037.05903;
+    cout << fixed;
+    printRiseTransitSet(rts);
 
 	return 0;
 }
+
+void printRiseTransitSet(const CAARiseTransitSetDetails & rts)
+{
+    cout << "{" << "bRiseValid:" << rts.bRiseValid << ","
+        << "Rise:" << rts.Rise << ","
+        << "bTransitValid:" << rts.bTransitValid << ","
+        << "bTransitAboveHorizon:" << rts.bTransitAboveHorizon << ","
+        << "Transit:" << rts.Transit << ","
+        << "bSetValid:" << rts.bSetValid << ","
+        << "Set:" << rts.Set << "}";
+}
+
 
 void printSaturnSatellites(const CAASaturnMoonsDetails & details)
 {
