@@ -28,12 +28,12 @@ to maintain a single distribution point for the source code.
 #ifndef __AAVSOP87_H__
 #define __AAVSOP87_H__
 
-#ifndef AAPLUS_EXT_CLASS
-#define AAPLUS_EXT_CLASS
-#endif //#ifndef AAPLUS_EXT_CLASS
+#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#define AAPLUS_EXT_class [[cheerp::jsexport]] 
+#endif //#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
 
 
-////////////////////////////// Classes ////////////////////////////////////////
+////////////////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es ////////////////////////////////////////
 
 struct VSOP87Coefficient
 {
@@ -48,7 +48,7 @@ struct VSOP87Coefficient2
   int                      nCoefficientsSize;
 };
 
-class AAPLUS_EXT_CLASS CVSOP87
+class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CVSOP87
 {
 public:
 //Static methods

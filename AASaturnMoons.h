@@ -27,9 +27,9 @@ to maintain a single distribution point for the source code.
 #ifndef __AASATURNMOONS_H__
 #define __AASATURNMOONS_H__
 
-#ifndef AAPLUS_EXT_CLASS
-#define AAPLUS_EXT_CLASS
-#endif //#ifndef AAPLUS_EXT_CLASS
+#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#define AAPLUS_EXT_class [[cheerp::jsexport]] 
+#endif //#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
 
 
 ////////////////////// Includes ///////////////////////////////////////////////
@@ -37,9 +37,9 @@ to maintain a single distribution point for the source code.
 #include "AA3DCoordinate.h"
 
 
-////////////////////// Classes ////////////////////////////////////////////////
+////////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es ////////////////////////////////////////////////
 
-class AAPLUS_EXT_CLASS CAASaturnMoonDetail
+class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAASaturnMoonDetail
 {
 public:
 //Constructors / Destructors
@@ -59,7 +59,7 @@ public:
   bool            bInShadowTransit;
 };
 
-class AAPLUS_EXT_CLASS CAASaturnMoonsDetails
+class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAASaturnMoonsDetails
 {
 public:
 //Member variables
@@ -73,7 +73,7 @@ public:
   CAASaturnMoonDetail Satellite8;
 };
 
-class AAPLUS_EXT_CLASS CAASaturnMoons
+class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAASaturnMoons
 {
 public:
 //Static methods

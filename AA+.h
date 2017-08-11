@@ -27,9 +27,9 @@ to maintain a single distribution point for the source code.
 #ifndef __AAPLUS_H__
 #define __AAPLUS_H__
 
-#ifndef AAPLUS_EXT_CLASS
-#define AAPLUS_EXT_CLASS
-#endif //#ifndef AAPLUS_EXT_CLASS
+#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#define AAPLUS_EXT_class [[cheerp::jsexport]] 
+#endif //#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
 
 
 /////////////////////////////// Includes //////////////////////////////////////

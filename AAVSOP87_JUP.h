@@ -28,14 +28,14 @@ to maintain a single distribution point for the source code.
 #ifndef __AAVSOP87_JUP_H__
 #define __AAVSOP87_JUP_H__
 
-#ifndef AAPLUS_EXT_CLASS
-#define AAPLUS_EXT_CLASS
+#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#define AAPLUS_EXT_class [[cheerp::jsexport]] 
 #endif
 
 
-////////////////////////////// Classes ////////////////////////////////////////
+////////////////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es ////////////////////////////////////////
 
-class AAPLUS_EXT_CLASS CAAVSOP87_Jupiter
+class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAVSOP87_Jupiter
 {
 public:
   static double A(double JD);

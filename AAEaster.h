@@ -27,14 +27,14 @@ to maintain a single distribution point for the source code.
 #ifndef __AAEASTER_H__
 #define __AAEASTER_H__
 
-#ifndef AAPLUS_EXT_CLASS
-#define AAPLUS_EXT_CLASS
-#endif //#ifndef AAPLUS_EXT_CLASS
+#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#define AAPLUS_EXT_class [[cheerp::jsexport]] 
+#endif //#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
 
 
-///////////////////// Classes /////////////////////////////////////////////////
+///////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es /////////////////////////////////////////////////
 
-class AAPLUS_EXT_CLASS CAAEasterDetails
+class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAEasterDetails
 {
 public:
 //Constructors / Destructors
@@ -48,7 +48,7 @@ public:
   long Day;
 };
 
-class AAPLUS_EXT_CLASS CAAEaster
+class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAEaster
 {
 public:
 //Static methods

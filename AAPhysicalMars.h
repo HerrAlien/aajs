@@ -27,14 +27,14 @@ to maintain a single distribution point for the source code.
 #ifndef __AAPHYSICALMARS_H__
 #define __AAPHYSICALMARS_H__
 
-#ifndef AAPLUS_EXT_CLASS
-#define AAPLUS_EXT_CLASS
-#endif //#ifndef AAPLUS_EXT_CLASS
+#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#define AAPLUS_EXT_class [[cheerp::jsexport]] 
+#endif //#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
 
 
-/////////////////////// Classes ///////////////////////////////////////////////
+/////////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es ///////////////////////////////////////////////
 
-class AAPLUS_EXT_CLASS CAAPhysicalMarsDetails
+class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAPhysicalMarsDetails
 {
 public:
   CAAPhysicalMarsDetails() : DE(0), 
@@ -59,7 +59,7 @@ public:
   double d;
 };
 
-class AAPLUS_EXT_CLASS CAAPhysicalMars
+class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAPhysicalMars
 {
 public:
 //Static methods

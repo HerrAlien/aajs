@@ -27,9 +27,9 @@ to maintain a single distribution point for the source code.
 #ifndef __AAABERRATION_H__
 #define __AAABERRATION_H__
 
-#ifndef AAPLUS_EXT_CLASS
-#define AAPLUS_EXT_CLASS
-#endif //#ifndef AAPLUS_EXT_CLASS
+#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#define AAPLUS_EXT_class [[cheerp::jsexport]] 
+#endif //#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
 
 
 /////////////////////// Includes //////////////////////////////////////////////
@@ -38,9 +38,9 @@ to maintain a single distribution point for the source code.
 #include "AA3DCoordinate.h"
 
 
-/////////////////////// Classes ///////////////////////////////////////////////
+/////////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es ///////////////////////////////////////////////
 
-class AAPLUS_EXT_CLASS CAAAberration
+class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAAberration
 {
 public:
 //Static methods

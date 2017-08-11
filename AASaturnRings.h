@@ -27,14 +27,14 @@ to maintain a single distribution point for the source code.
 #ifndef __AASATURNRINGS_H__
 #define __AASATURNRINGS_H__
 
-#ifndef AAPLUS_EXT_CLASS
-#define AAPLUS_EXT_CLASS
-#endif //#ifndef AAPLUS_EXT_CLASS
+#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#define AAPLUS_EXT_class [[cheerp::jsexport]] 
+#endif //#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
 
 
-/////////////////////// Classes ///////////////////////////////////////////////
+/////////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es ///////////////////////////////////////////////
 
-class AAPLUS_EXT_CLASS CAASaturnRingDetails
+class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAASaturnRingDetails
 {
 public:
 //Constructors / Destructors
@@ -61,7 +61,7 @@ public:
   double U2;
 };
 
-class AAPLUS_EXT_CLASS CAASaturnRings
+class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAASaturnRings
 {
 public:
 //Static methods

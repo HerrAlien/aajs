@@ -27,9 +27,9 @@ to maintain a single distribution point for the source code.
 #ifndef __AAPHYSICALMOON_H__
 #define __AAPHYSICALMOON_H__
 
-#ifndef AAPLUS_EXT_CLASS
-#define AAPLUS_EXT_CLASS
-#endif //#ifndef AAPLUS_EXT_CLASS
+#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#define AAPLUS_EXT_class [[cheerp::jsexport]] 
+#endif //#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
 
 
 /////////////////////// Includes //////////////////////////////////////////////
@@ -37,9 +37,9 @@ to maintain a single distribution point for the source code.
 #include "AACoordinateTransformation.h"
 
 
-/////////////////////// Classes ///////////////////////////////////////////////
+/////////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es ///////////////////////////////////////////////
 
-class AAPLUS_EXT_CLASS CAAPhysicalMoonDetails
+class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAPhysicalMoonDetails
 {
 public:
 //Constructors / Destructors
@@ -63,7 +63,7 @@ public:
   double P;
 };
 
-class AAPLUS_EXT_CLASS CAASelenographicMoonDetails
+class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAASelenographicMoonDetails
 {
 public:
 //Constructors / Destructors
@@ -79,7 +79,7 @@ public:
   double c0;
 };
 
-class AAPLUS_EXT_CLASS CAAPhysicalMoon
+class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAPhysicalMoon
 {
 public:
 //Static methods

@@ -27,14 +27,14 @@ to maintain a single distribution point for the source code.
 #ifndef __AAECLIPSES_H__
 #define __AAECLIPSES_H__
 
-#ifndef AAPLUS_EXT_CLASS
-#define AAPLUS_EXT_CLASS
-#endif //#ifndef AAPLUS_EXT_CLASS
+#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#define AAPLUS_EXT_class [[cheerp::jsexport]] 
+#endif //#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
 
 
-/////////////////////// Classes ///////////////////////////////////////////////
+/////////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es ///////////////////////////////////////////////
 
-class AAPLUS_EXT_CLASS CAASolarEclipseDetails
+class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAASolarEclipseDetails
 {
 public:
 //Constants
@@ -65,7 +65,7 @@ public:
 };
 
 
-class AAPLUS_EXT_CLASS CAALunarEclipseDetails
+class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAALunarEclipseDetails
 {
 public:
 //Constructors / Destructors
@@ -99,7 +99,7 @@ public:
   double PartialPhasePenumbraSemiDuration;
 };
 
-class AAPLUS_EXT_CLASS CAAEclipses
+class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAEclipses
 {
 public:
 //Static methods

@@ -35,7 +35,7 @@ to maintain a single distribution point for the source code.
 
 ////////////////////////////// Classes ////////////////////////////////////////
 
-class AAPLUS_EXT_CLASS CAAVSOP87E_Uranus
+class [[cheerp::jsexport]] AAPLUS_EXT_CLASS CAAVSOP87E_Uranus
 {
 public:
   static double X(double JD);

@@ -27,14 +27,14 @@ to maintain a single distribution point for the source code.
 #ifndef __AARISETRANSITSET_H__
 #define __AARISETRANSITSET_H__
 
-#ifndef AAPLUS_EXT_CLASS
-#define AAPLUS_EXT_CLASS
-#endif //#ifndef AAPLUS_EXT_CLASS
+#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#define AAPLUS_EXT_class [[cheerp::jsexport]] 
+#endif //#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
 
 
-/////////////////////// Classes ///////////////////////////////////////////////
+/////////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es ///////////////////////////////////////////////
 
-class AAPLUS_EXT_CLASS CAARiseTransitSetDetails
+class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAARiseTransitSetDetails
 {
 public:
 //Constructors / Destructors
@@ -57,7 +57,7 @@ public:
   double Set;
 };
 
-class AAPLUS_EXT_CLASS CAARiseTransitSet
+class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAARiseTransitSet
 {
 public:
 //Static methods
