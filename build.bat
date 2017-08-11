@@ -25,4 +25,4 @@ set FILES=%A:"=%
 
 set FILES_NOTEST=%FILES:AATest.cpp=%
 
-clang++ -target cheerp %FILES_NOTEST% %*
+clang++ -target cheerp %FILES_NOTEST% cheerp.cpp %*
