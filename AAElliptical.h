@@ -27,9 +27,9 @@ to maintain a single distribution point for the source code.
 #ifndef __AAELLIPTICAL_H__
 #define __AAELLIPTICAL_H__
 
-#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
-#define AAPLUS_EXT_class [[cheerp::jsexport]] 
-#endif //#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#ifndef AAPLUS_EXT_CLASS
+#define AAPLUS_EXT_CLASS
+#endif //#ifndef AAPLUS_EXT_CLASS
 
 
 /////////////////////// Includes //////////////////////////////////////////////
@@ -37,9 +37,9 @@ to maintain a single distribution point for the source code.
 #include "AA3DCoordinate.h"
 
 
-/////////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es ///////////////////////////////////////////////
+/////////////////////// Classes ///////////////////////////////////////////////
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAEllipticalObjectElements
+class AAPLUS_EXT_CLASS CAAEllipticalObjectElements
 {
 public:
 //Constructors / Destructors
@@ -63,7 +63,7 @@ public:
   double T;
 };
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAEllipticalPlanetaryDetails
+class AAPLUS_EXT_CLASS CAAEllipticalPlanetaryDetails
 {
 public:
 //Constructors / Destructors
@@ -85,7 +85,7 @@ public:
   double ApparentGeocentricDeclination;
 };
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAEllipticalObjectDetails
+class AAPLUS_EXT_CLASS CAAEllipticalObjectDetails
 {
 public:
 //Constructors / Destructors
@@ -121,7 +121,7 @@ public:
   double PhaseAngle;
 };
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAElliptical
+class AAPLUS_EXT_CLASS CAAElliptical
 {
 public:
 //Enums

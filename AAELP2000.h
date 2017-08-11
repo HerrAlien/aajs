@@ -28,8 +28,8 @@ to maintain a single distribution point for the source code.
 #ifndef __AAELP2000_H__
 #define __AAELP2000_H__
 
-#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
-#define AAPLUS_EXT_class [[cheerp::jsexport]] 
+#ifndef AAPLUS_EXT_CLASS
+#define AAPLUS_EXT_CLASS
 #endif
 
 
@@ -38,16 +38,16 @@ to maintain a single distribution point for the source code.
 #include "AA3DCoordinate.h"
 
 
-////////////////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es ////////////////////////////////////////
+////////////////////////////// Classes ////////////////////////////////////////
 
-struct AAPLUS_EXT_class [[cheerp::jsexport]]  ELP2000MainProblemCoefficient
+struct AAPLUS_EXT_CLASS ELP2000MainProblemCoefficient
 {
   int    m_I[4];
   double m_A;
   double m_B[6];
 };
 
-struct AAPLUS_EXT_class [[cheerp::jsexport]]  ELP2000EarthTidalMoonRelativisticSolarEccentricityCoefficient
+struct AAPLUS_EXT_CLASS ELP2000EarthTidalMoonRelativisticSolarEccentricityCoefficient
 {
   int    m_IZ;
   int    m_I[4];
@@ -56,7 +56,7 @@ struct AAPLUS_EXT_class [[cheerp::jsexport]]  ELP2000EarthTidalMoonRelativisticS
   double m_P;
 };
 
-struct AAPLUS_EXT_class [[cheerp::jsexport]]  ELP2000PlanetPertCoefficient
+struct AAPLUS_EXT_CLASS ELP2000PlanetPertCoefficient
 {
   int    m_ip[11];
   double m_theta;
@@ -64,7 +64,7 @@ struct AAPLUS_EXT_class [[cheerp::jsexport]]  ELP2000PlanetPertCoefficient
   double m_P;
 };
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAELP2000
+class AAPLUS_EXT_CLASS CAAELP2000
 {
 public:
 //Static methods

@@ -27,9 +27,9 @@ to maintain a single distribution point for the source code.
 #ifndef __AAPARALLAX_H__
 #define __AAPARALLAX_H__
 
-#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
-#define AAPLUS_EXT_class [[cheerp::jsexport]] 
-#endif //#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#ifndef AAPLUS_EXT_CLASS
+#define AAPLUS_EXT_CLASS
+#endif //#ifndef AAPLUS_EXT_CLASS
 
 
 /////////////////////// Includes //////////////////////////////////////////////
@@ -37,9 +37,9 @@ to maintain a single distribution point for the source code.
 #include "AA2DCoordinate.h"
 
 
-/////////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es ///////////////////////////////////////////////
+/////////////////////// Classes ///////////////////////////////////////////////
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAATopocentricEclipticDetails
+class AAPLUS_EXT_CLASS CAATopocentricEclipticDetails
 {
 public:
 //Constructors / Destructors
@@ -55,7 +55,7 @@ public:
   double Semidiameter;
 };
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAParallax
+class AAPLUS_EXT_CLASS CAAParallax
 {
 public:
 //Conversion functions

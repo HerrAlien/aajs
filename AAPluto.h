@@ -27,14 +27,14 @@ to maintain a single distribution point for the source code.
 #ifndef __AAPLUTO_H__
 #define __AAPLUTO_H__
 
-#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
-#define AAPLUS_EXT_class [[cheerp::jsexport]] 
-#endif //#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#ifndef AAPLUS_EXT_CLASS
+#define AAPLUS_EXT_CLASS
+#endif //#ifndef AAPLUS_EXT_CLASS
 
 
-/////////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es ///////////////////////////////////////////////
+/////////////////////// Classes ///////////////////////////////////////////////
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAPluto
+class AAPLUS_EXT_CLASS CAAPluto
 {
 public:
 //Static methods

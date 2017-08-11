@@ -27,14 +27,14 @@ to maintain a single distribution point for the source code.
 #ifndef __AAPHYSICALJUPITER_H__
 #define __AAPHYSICALJUPITER_H__
 
-#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
-#define AAPLUS_EXT_class [[cheerp::jsexport]] 
-#endif //#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#ifndef AAPLUS_EXT_CLASS
+#define AAPLUS_EXT_CLASS
+#endif //#ifndef AAPLUS_EXT_CLASS
 
 
-/////////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es ///////////////////////////////////////////////
+/////////////////////// Classes ///////////////////////////////////////////////
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAPhysicalJupiterDetails
+class AAPLUS_EXT_CLASS CAAPhysicalJupiterDetails
 {
 public:
 //Constructors / Destructors
@@ -58,7 +58,7 @@ public:
   double P;
 };
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAPhysicalJupiter
+class AAPLUS_EXT_CLASS CAAPhysicalJupiter
 {
 public:
 //Static methods

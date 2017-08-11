@@ -27,14 +27,14 @@ to maintain a single distribution point for the source code.
 #ifndef __AADATE_H__
 #define __AADATE_H__
 
-#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
-#define AAPLUS_EXT_class [[cheerp::jsexport]] 
-#endif //#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#ifndef AAPLUS_EXT_CLASS
+#define AAPLUS_EXT_CLASS
+#endif //#ifndef AAPLUS_EXT_CLASS
 
 
-/////////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es ///////////////////////////////////////////////
+/////////////////////// Classes ///////////////////////////////////////////////
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAACalendarDate
+class AAPLUS_EXT_CLASS CAACalendarDate
 {
 public:
 //Constructors / Destructors
@@ -51,7 +51,7 @@ public:
 };
 
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAADate
+class AAPLUS_EXT_CLASS CAADate
 {
 public:
 //Enums

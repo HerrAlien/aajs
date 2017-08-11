@@ -27,14 +27,14 @@ to maintain a single distribution point for the source code.
 #ifndef __AABINARYSTAR_H__
 #define __AABINARYSTAR_H__
 
-#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
-#define AAPLUS_EXT_class [[cheerp::jsexport]] 
-#endif //#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#ifndef AAPLUS_EXT_CLASS
+#define AAPLUS_EXT_CLASS
+#endif //#ifndef AAPLUS_EXT_CLASS
 
 
-/////////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es ///////////////////////////////////////////////
+/////////////////////// Classes ///////////////////////////////////////////////
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAABinaryStarDetails
+class AAPLUS_EXT_CLASS CAABinaryStarDetails
 {
 public:
 //Constructors / Destructors
@@ -50,7 +50,7 @@ public:
   double Rho;
 };
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAABinaryStar
+class AAPLUS_EXT_CLASS CAABinaryStar
 {
 public:
 //Static methods

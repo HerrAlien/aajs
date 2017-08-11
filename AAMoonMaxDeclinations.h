@@ -27,14 +27,14 @@ to maintain a single distribution point for the source code.
 #ifndef __AAMOONMAXDECLINATIONS_H__
 #define __AAMOONMAXDECLINATIONS_H__
 
-#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
-#define AAPLUS_EXT_class [[cheerp::jsexport]] 
-#endif //#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#ifndef AAPLUS_EXT_CLASS
+#define AAPLUS_EXT_CLASS
+#endif //#ifndef AAPLUS_EXT_CLASS
 
 
-////////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es ////////////////////////////////////////////////
+////////////////////// Classes ////////////////////////////////////////////////
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAMoonMaxDeclinations
+class AAPLUS_EXT_CLASS CAAMoonMaxDeclinations
 {
 public:
 //Static methods

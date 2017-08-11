@@ -1,6 +1,6 @@
 /*
 Module : AA3DCoordinate.h
-Purpose: Implementation for the simple class [[cheerp::jsexport]]  [[cheerp::jsexport]]  to encapsulate a three dimensional coordinate
+Purpose: Implementation for the simple class to encapsulate a three dimensional coordinate
 Created: PJN / 29-12-2003
 
 Copyright (c) 2003 - 2017 by PJ Naughter (Web: www.naughter.com, Email: pjna@naughter.com)
@@ -27,14 +27,14 @@ to maintain a single distribution point for the source code.
 #ifndef __AA3DCOORDINATE_H__
 #define __AA3DCOORDINATE_H__
 
-#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
-#define AAPLUS_EXT_class [[cheerp::jsexport]] 
-#endif //#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#ifndef AAPLUS_EXT_CLASS
+#define AAPLUS_EXT_CLASS
+#endif //#ifndef AAPLUS_EXT_CLASS
 
 
-/////////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es ///////////////////////////////////////////////
+/////////////////////// Classes ///////////////////////////////////////////////
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAA3DCoordinate
+class AAPLUS_EXT_CLASS CAA3DCoordinate
 {
 public:
 //Constructors / Destructors

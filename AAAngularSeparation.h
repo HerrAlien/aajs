@@ -27,14 +27,14 @@ to maintain a single distribution point for the source code.
 #ifndef __AAANGULARSEPARATION_H__
 #define __AAANGULARSEPARATION_H__
 
-#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
-#define AAPLUS_EXT_class [[cheerp::jsexport]] 
-#endif //#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#ifndef AAPLUS_EXT_CLASS
+#define AAPLUS_EXT_CLASS
+#endif //#ifndef AAPLUS_EXT_CLASS
 
 
-////////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es ////////////////////////////////////////////////
+////////////////////// Classes ////////////////////////////////////////////////
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAAngularSeparation
+class AAPLUS_EXT_CLASS CAAAngularSeparation
 {
 public:
 //Static methods

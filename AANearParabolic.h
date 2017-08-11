@@ -27,9 +27,9 @@ to maintain a single distribution point for the source code.
 #ifndef __AANEARPARABOLIC_H__
 #define __AANEARPARABOLIC_H__
 
-#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
-#define AAPLUS_EXT_class [[cheerp::jsexport]] 
-#endif //#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#ifndef AAPLUS_EXT_CLASS
+#define AAPLUS_EXT_CLASS
+#endif //#ifndef AAPLUS_EXT_CLASS
 
 
 /////////////////////// Includes //////////////////////////////////////////////
@@ -37,9 +37,9 @@ to maintain a single distribution point for the source code.
 #include "AA3DCoordinate.h"
 
 
-/////////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es ///////////////////////////////////////////////
+/////////////////////// Classes ///////////////////////////////////////////////
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAANearParabolicObjectElements
+class AAPLUS_EXT_CLASS CAANearParabolicObjectElements
 {
 public:
 //Constructors / Destructors
@@ -63,7 +63,7 @@ public:
   double e;
 };
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAANearParabolicObjectDetails
+class AAPLUS_EXT_CLASS CAANearParabolicObjectDetails
 {
 public:
 //Constructors / Destructors
@@ -99,7 +99,7 @@ public:
   double PhaseAngle;
 };
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAANearParabolic
+class AAPLUS_EXT_CLASS CAANearParabolic
 {
 public:
 //Static methods

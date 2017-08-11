@@ -27,9 +27,9 @@ to maintain a single distribution point for the source code.
 #ifndef __AANODES_H__
 #define __AANODES_H__
 
-#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
-#define AAPLUS_EXT_class [[cheerp::jsexport]] 
-#endif //#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#ifndef AAPLUS_EXT_CLASS
+#define AAPLUS_EXT_CLASS
+#endif //#ifndef AAPLUS_EXT_CLASS
 
 
 //////////////////////// Includes /////////////////////////////////////////////
@@ -38,9 +38,9 @@ to maintain a single distribution point for the source code.
 #include "AAParabolic.h"
 
 
-//////////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es //////////////////////////////////////////////
+//////////////////////// Classes //////////////////////////////////////////////
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAANodeObjectDetails
+class AAPLUS_EXT_CLASS CAANodeObjectDetails
 {
 public:
 //Constructors / Destructors
@@ -54,7 +54,7 @@ public:
   double radius;
 };
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAANodes
+class AAPLUS_EXT_CLASS CAANodes
 {
 public:
 //Static methods

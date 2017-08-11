@@ -27,9 +27,9 @@ to maintain a single distribution point for the source code.
 #ifndef __AAPARABOLIC_H__
 #define __AAPARABOLIC_H__
 
-#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
-#define AAPLUS_EXT_class [[cheerp::jsexport]] 
-#endif //#ifndef AAPLUS_EXT_class [[cheerp::jsexport]] 
+#ifndef AAPLUS_EXT_CLASS
+#define AAPLUS_EXT_CLASS
+#endif //#ifndef AAPLUS_EXT_CLASS
 
 
 /////////////////////// Includes //////////////////////////////////////////////
@@ -37,9 +37,9 @@ to maintain a single distribution point for the source code.
 #include "AA3DCoordinate.h"
 
 
-/////////////////////// class [[cheerp::jsexport]]  [[cheerp::jsexport]] es ///////////////////////////////////////////////
+/////////////////////// Classes ///////////////////////////////////////////////
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAParabolicObjectElements
+class AAPLUS_EXT_CLASS CAAParabolicObjectElements
 {
 public:
 //Constructors / Destructors
@@ -61,7 +61,7 @@ public:
   double T;
 };
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAParabolicObjectDetails
+class AAPLUS_EXT_CLASS CAAParabolicObjectDetails
 {
 public:
 //Constructors / Destructors
@@ -97,7 +97,7 @@ public:
   double PhaseAngle;
 };
 
-class [[cheerp::jsexport]]  [[cheerp::jsexport]]  AAPLUS_EXT_class [[cheerp::jsexport]]  CAAParabolic
+class AAPLUS_EXT_CLASS CAAParabolic
 {
 public:
 //Static methods
