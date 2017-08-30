@@ -1055,8 +1055,54 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                     d = "-" + d;
                 
                 return {"Ord3" : d, "Ord2" : m, "Ord1" : s};
-            }
+            },
+            ValuesToPolynomialCoefficients_Forward : function (ValuesArray) {
+                var coefficients = [];
+                if (ValuesArray.length >= 4) {
+                
+                    coefficients[0] = ValuesArray[0];
+                    coefficients[1] = ValuesArray[1] - ValuesArray[0];
+                    coefficients[2] = ValuesArray[2] - 2 * ValuesArray[1] + ValuesArray[0];
+                    coefficients[3] = ValuesArray[3] - 3 * ValuesArray[2] + 3 * ValuesArray[1] - ValuesArray[0];
 
+                    coefficients[2] /= 2;
+                    coefficients[3] /= 6;
+
+                }
+                
+                return coefficients;
+            },
+            
+            ValuesToPolynomialCoefficients_Backward : function (ValuesArray) {
+                var coefficients = [];
+                if (ValuesArray.length >= 4) {
+                
+                    coefficients[0] = ValuesArray[3];
+                    coefficients[1] = ValuesArray[3] - ValuesArray[2];
+                    coefficients[2] = ValuesArray[3] - 2 * ValuesArray[2] + ValuesArray[1];
+                    coefficients[3] = ValuesArray[3] - 3 * ValuesArray[2] + 3 * ValuesArray[1] - ValuesArray[0];
+
+                    coefficients[2] /= 2;
+                    coefficients[3] /= 6;
+
+                }
+                
+                return coefficients;
+            },
+            
+            ValuesToPolynomialCoefficients_Average : function (ValuesArray) {
+    
+                var forwardValues = ValuesArray.slice (3, 7);
+                var backwardValues = ValuesArray.slice (0, 4);
+            
+                var forwards = AAJS.Numerical.ValuesToPolynomialCoefficients_Forward(forwardValues);
+                var backwards = AAJS.Numerical.ValuesToPolynomialCoefficients_Backward (backwardValues);
+
+                return [ 0.5 * (backwards[0] + forwards[0]),
+                         0.5 * (backwards[1] + forwards[1]),
+                         0.5 * (backwards[2] + forwards[2]),
+                         0.5 * (backwards[3] + forwards[3])];
+            }
         };
         
     AAJS['Elliptical']['EccentricAnomalyFromMeanAnomaly'] = function (M, e) {
