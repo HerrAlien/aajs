@@ -1187,7 +1187,7 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
         };
     };
     
-    AAJS['Moon']['SiderealPeriodEpochJD'] = 2451544.5 + 0.03*365.25;
+    AAJS['Moon']['SiderealPeriodEpochJD'] = AAJS.Date.DateToJD (2000, 01, 06, true);
     
     AAJS['Moon']['kForJD'] = function (JD) {
         return 12.3685 * (JD - AAJS['Moon']['SiderealPeriodEpochJD'])/365.25;
