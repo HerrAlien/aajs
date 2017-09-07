@@ -256,14 +256,14 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
         Eclipses : {
             CalculateSolar : function (k) {
                 __ZN11CAAEclipses14CalculateSolarEd (0, k);
-                return {"flags" : HEAP32[0], "gamma" : HEAPF64[4], "GreatestMagnitude" : HEAPF64[5], "F" : HEAPF64[2], "u" : HEAPF64[3], "JdOfMaimumEclipse" : HEAPF64[1],
+                return {"flags" : HEAP32[0], "bEclipse" : HEAP32[0] > 0, "gamma" : HEAPF64[4], "GreatestMagnitude" : HEAPF64[5], "F" : HEAPF64[2], "u" : HEAPF64[3], "JdOfMaximumEclipse" : HEAPF64[1],
                 "isTotal" : (HEAP32[0] & 0x01) > 0, "isAnnular" : (HEAP32[0] & 0x02) > 0, "isAnnularTotal" : (HEAP32[0] & 0x04) > 0, "isCentral" : (HEAP32[0] & 0x08) > 0,
                 "isPartial" : (HEAP32[0] & 0x10) > 0, "isNonCentral" : (HEAP32[0] & 0x20) > 0 };
             },
             
             CalculateLunar : function (k) {
                 __ZN11CAAEclipses14CalculateLunarEd(0, k);
-                return {"bEclipse" : HEAP32[0] > 0, "JdOfMaximumEclipse": HEAPF64[1], "F" : HEAPF64[2], "u" : HEAPF64[3], "gamma" : HEAPF64[4], "PenumbralRadii" : HEAPF64[5],
+                return {"flags" : HEAP32[0], "bEclipse" : HEAP32[0] > 0, "JdOfMaximumEclipse": HEAPF64[1], "F" : HEAPF64[2], "u" : HEAPF64[3], "gamma" : HEAPF64[4], "PenumbralRadii" : HEAPF64[5],
                 "UmbralRadii" : HEAPF64[6], "PenumbralMagnitude" : HEAPF64[7], "UmbralMagnitude" : HEAPF64[8],
                 "PartialPhaseSemiDuration" : HEAPF64[9], "TotalPhaseSemiDuration" : HEAPF64[10],
                 "PartialPhasePenumbraSemiDuration" : HEAPF64[11]};
@@ -876,25 +876,7 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
                 };
             }
         },
-        Eclipses : {
-            CalculateLunar : function (k) {
-                __ZN11CAAEclipses14CalculateLunarEd (0, k);
-                return {
-                  "bEclipse" : HEAP8[0],
-                  "TimeOfMaximumEclipse" : HEAPF64[1],
-                  "F" : HEAPF64[2],
-                  "u" : HEAPF64[3],
-                  "gamma" : HEAPF64[4],
-                  "PenumbralRadii" : HEAPF64[5],
-                  "UmbralRadii" : HEAPF64[6],
-                  "PenumbralMagnitude" : HEAPF64[7],
-                  "UmbralMagnitude" : HEAPF64[8],
-                  "PartialPhaseSemiDuration" : HEAPF64[9],
-                  "TotalPhaseSemiDuration" : HEAPF64[10],
-                  "PartialPhasePenumbraSemiDuration" : HEAPF64[11]
-                };
-            }
-        },
+        
         RiseTransitSet : {
             /**
                 @param yesterdayRA, RA, tomorrowRA need to be expressed in hours and minutes
