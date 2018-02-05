@@ -3,7 +3,7 @@ Module : AA+.h
 Purpose: Main include file for AA+ framework
 Created: PJN / 30-1-2005
 
-Copyright (c) 2003 - 2017 by PJ Naughter (Web: www.naughter.com, Email: pjna@naughter.com)
+Copyright (c) 2003 - 2018 by PJ Naughter (Web: www.naughter.com, Email: pjna@naughter.com)
 
 All rights reserved.
 
@@ -52,6 +52,9 @@ to maintain a single distribution point for the source code.
 #ifndef AAPLUS_ELP2000_NO_HIGH_PRECISION
 #include "AAELP2000.h"
 #endif //#ifndef AAPLUS_ELP2000_NO_HIGH_PRECISION
+#ifndef AAPLUS_NO_ELPMPP02
+#include "AAELPMPP02.h"
+#endif //#ifndef AAPLUS_NO_ELPMPP02
 #include "AAEquationOfTime.h"
 #include "AAEquinoxesAndSolstices.h"
 #include "AAFK5.h"

@@ -7,7 +7,7 @@ History: PJN / 16-09-2015 1. CAAPhysicalMars::Calculate now includes a "bool bHi
                           truncated theory as presented in Meeus's book. 
 
 
-Copyright (c) 2003 - 2017 by PJ Naughter (Web: www.naughter.com, Email: pjna@naughter.com)
+Copyright (c) 2003 - 2018 by PJ Naughter (Web: www.naughter.com, Email: pjna@naughter.com)
 
 All rights reserved.
 
@@ -89,7 +89,7 @@ CAAPhysicalMarsDetails CAAPhysicalMars::Calculate(double JD, bool bHighPrecision
     LightTravelTime = CAAElliptical::DistanceToLightTime(DELTA);
 
     //Prepare for the next loop around
-    bIterate = (fabs(LightTravelTime - PreviousLightTravelTime) > 2E-6); //2E-6 correponds to 0.17 of a second
+    bIterate = (fabs(LightTravelTime - PreviousLightTravelTime) > 2e-6); //2e-6 correponds to 0.17 of a second
     if (bIterate)
       PreviousLightTravelTime = LightTravelTime;
   }

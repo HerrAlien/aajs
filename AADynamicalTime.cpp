@@ -77,8 +77,13 @@ History: PJN / 01-02-2005 1. Fixed a problem with the declaration of the variabl
          PJN / 19-02-2017 1. Fixed a bug in the CAADynamicalTime::UTC2TT & CAADynamicalTime::TT2UTC methods where the code would
                           incorrectly use BaseMJD instead of JD when determining if the date is in the valid range of UTC. Thanks
                           to Luigi Candurro for reporting this bug.
+         PJN / 30-07-2017 1. Updated the observed DeltaT values from http://maia.usno.navy.mil/ser7/deltat.data to 1st June 2017
+                          2. Updated the predicted DeltaT values from http://maia.usno.navy.mil/ser7/deltat.preds to Jan 2026
+         PJN / 20-01-2018 1. Updated the observed DeltaT values from http://maia.usno.navy.mil/ser7/deltat.data to 1st January 
+                          2018
+                          2. Updated the predicted DeltaT values from http://maia.usno.navy.mil/ser7/deltat.preds to Jan 2026
 
-Copyright (c) 2003 - 2017 by PJ Naughter (Web: www.naughter.com, Email: pjna@naughter.com)
+Copyright (c) 2003 - 2018 by PJ Naughter (Web: www.naughter.com, Email: pjna@naughter.com)
 
 All rights reserved.
 
@@ -113,7 +118,7 @@ struct DeltaTValue
 
 const DeltaTValue g_DeltaTValues[] = 
 {
-//All the initial values are observed values from 1 February 1973 to 1 January 2017 as taken from http://maia.usno.navy.mil/ser7/deltat.data 
+//All the initial values are observed values from 1 February 1973 to 1 June 2017 as taken from http://maia.usno.navy.mil/ser7/deltat.data 
   { 2441714.5,	43.4724 },
   { 2441742.5,	43.5648 },
   { 2441773.5,	43.6737 },
@@ -642,28 +647,30 @@ const DeltaTValue g_DeltaTValues[] =
   { 2457693.5,  68.5078 }, //1 November 2016
   { 2457723.5,  68.5537 }, //1 December 2016
   { 2457754.5,  68.5928 }, //1 January 2017
+  { 2457785.5,  68.6298 }, //1 February 2017
+  { 2457813.5,  68.6671 }, //1 March 2017
+  { 2457844.5,  68.7135 }, //1 April 2017
+  { 2457874.5,  68.7623 }, //1 May 2017
+  { 2457905.5,  68.8033 }, //1 June 2017
+  { 2457935.5,  68.8245 }, //1 July 2017
+  { 2457966.5,  68.8373 }, //1 August 2017
+  { 2457997.5,  68.8477 }, //1 September 2017
+  { 2458027.5,  68.8689 }, //1 October 2017
+  { 2458058.5,  68.9006 }, //1 November 2017
+  { 2458088.5,  68.9355 }, //1 December 2017
+  { 2458119.5,  68.9677 }, //1 January 2018
 
-//All these final values are predicted values from Year 2017.25 to Year 2026.0 are taken from http://maia.usno.navy.mil/ser7/deltat.preds
-  { 2457845.75, 68.72   }, //2017.25
-  { 2457937.0,  68.86   }, //2017.5
-  { 2458028.25, 69.0    }, //2017.75
-  { 2458119.5,  69.1    }, //2018.0
-  { 2458210.75, 69.2    }, //2018.25
+//All these final values are predicted values from Year 2018.25 to Year 2026.0 are taken from http://maia.usno.navy.mil/ser7/deltat.preds
+  { 2458210.75, 69.14   }, //2018.25
   { 2458302.0,  69.3    }, //2018.5
-  { 2458393.25, 69.4    }, //2018.75
-  { 2458484.5,  69.6    }, //2019.0
-  { 2458575.75, 69.7    }, //2019.25
-  { 2458667.0,  69.9    }, //2019.5
-  { 2458758.25, 70      }, //2019.75
-  { 2458849.5,  70.2    }, //2020.0
+  { 2458484.5,  69.5    }, //2019.0
+  { 2458575.75, 69.6    }, //2019.25
+  { 2458667.0,  69.7    }, //2019.5
+  { 2458758.25, 69.8    }, //2019.75
+  { 2458849.5,  69.9    }, //2020.0
   { 2458941.0,  70      }, //2020.25
-  { 2459032.5,  70      }, //2020.5
-  { 2459124.0,  71      }, //2020.75
   { 2459763.0,  71      }, //2022.5
-  { 2459854.25, 72      }, //2022.75
-  { 2460493.5,  72      }, //2024.5
-  { 2460585.0,  73      }, //2024.75
-  { 2461041.5,  73      }, //2026.0
+  { 2461041.5,  72      }, //2026.0
 
 //Note as currently coded there is a single discontinuity of c. 2.074 seconds on 1 January 2026. At this point http://maia.usno.navy.mil/ser7/deltat.preds indicates an error value for DeltaT of about 5 seconds anyway.
 };

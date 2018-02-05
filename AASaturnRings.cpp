@@ -16,7 +16,7 @@ History: PJN / 05-07-2015 1. U1 (the Saturnicentric longitude of the Sun) and U2
                           which if set to true means the code uses the full VSOP87 theory rather than the
                           truncated theory as presented in Meeus's book. 
 
-Copyright (c) 2004 - 2017 by PJ Naughter (Web: www.naughter.com, Email: pjna@naughter.com)
+Copyright (c) 2004 - 2018 by PJ Naughter (Web: www.naughter.com, Email: pjna@naughter.com)
 
 All rights reserved.
 
@@ -102,7 +102,7 @@ CAASaturnRingDetails CAASaturnRings::Calculate(double JD, bool bHighPrecision)
     EarthLightTravelTime = CAAElliptical::DistanceToLightTime(DELTA);
 
     //Prepare for the next loop around
-    bIterate = (fabs(EarthLightTravelTime - PreviousEarthLightTravelTime) > 2E-6); //2E-6 corresponds to 0.17 of a second
+    bIterate = (fabs(EarthLightTravelTime - PreviousEarthLightTravelTime) > 2e-6); //2e-6 corresponds to 0.17 of a second
     if (bIterate)
     {
       JD1 = JD - EarthLightTravelTime;

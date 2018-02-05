@@ -4,7 +4,7 @@ Purpose: Implementation for the algorithms for VSOP87
 Created: PJN / 26-08-2015
 History: PJN / 28-08-2015 1. Initial public release.
 
-Copyright (c) 2015 - 2017 by PJ Naughter (Web: www.naughter.com, Email: pjna@naughter.com)
+Copyright (c) 2015 - 2018 by PJ Naughter (Web: www.naughter.com, Email: pjna@naughter.com)
 
 All rights reserved.
 
@@ -83,6 +83,3 @@ double CVSOP87::Calculate_Dash(double JD, const VSOP87Coefficient2* pTable, int 
   //The value returned is in per days
   return Result / 365250;
 }
-
-
-

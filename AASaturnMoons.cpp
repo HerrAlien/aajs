@@ -12,7 +12,7 @@ History: PJN / 09-02-2004 1. Updated the values used in the calculation of the a
                           of the value mu for the eight moon (Iapetus). Thanks to Cedric Foellmi for 
                           reporting this issue.
 
-Copyright (c) 2004 - 2017 by PJ Naughter (Web: www.naughter.com, Email: pjna@naughter.com)
+Copyright (c) 2004 - 2018 by PJ Naughter (Web: www.naughter.com, Email: pjna@naughter.com)
 
 All rights reserved.
 
@@ -102,7 +102,7 @@ CAASaturnMoonsDetails CAASaturnMoons::CalculateHelper(double JD, double sunlongr
     LightTravelTime = CAAElliptical::DistanceToLightTime(DELTA);
 
     //Prepare for the next loop around
-    bIterate = (fabs(LightTravelTime - PreviousLightTravelTime) > 2E-6); //2E-6 corresponds to 0.17 of a second
+    bIterate = (fabs(LightTravelTime - PreviousLightTravelTime) > 2e-6); //2e-6 corresponds to 0.17 of a second
     if (bIterate)
     {
       JD1 = JD - LightTravelTime;
@@ -569,7 +569,7 @@ CAASaturnMoonsDetails CAASaturnMoons::Calculate(double JD, bool bHighPrecision)
     EarthLightTravelTime = CAAElliptical::DistanceToLightTime(DELTA);
 
     //Prepare for the next loop around
-    bIterate = (fabs(EarthLightTravelTime - PreviousEarthLightTravelTime) > 2E-6); //2E-6 corresponds to 0.17 of a second
+    bIterate = (fabs(EarthLightTravelTime - PreviousEarthLightTravelTime) > 2e-6); //2e-6 corresponds to 0.17 of a second
     if (bIterate)
     {
       JD1 = JD - EarthLightTravelTime;
