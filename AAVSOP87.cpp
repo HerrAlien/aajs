@@ -33,17 +33,16 @@ using namespace std;
 double CVSOP87::Calculate(double JD, const VSOP87Coefficient2* pTable, int nTableSize, bool bAngle)
 {
   double T = (JD - 2451545) / 365250;
-  double TTerm = T;
+  double TTerm = pow(T, nTableSize - 1);
   double Result = 0;
-  for (int i = 0; i<nTableSize; i++)
+  for (int i = nTableSize - 1; i >= 0; i--)
   {
     double TempResult = 0;
-    for (int j = 0; j < pTable[i].nCoefficientsSize; j++)
+    for (int j = pTable[i].nCoefficientsSize - 1; j >= 0 ; j--)
       TempResult += pTable[i].pCoefficients[j].A * cos(pTable[i].pCoefficients[j].B + pTable[i].pCoefficients[j].C*T);
-    if (i)
     {
       TempResult *= TTerm;
-      TTerm *= T;
+      TTerm = TTerm/T;
     }
     Result += TempResult;
   }
