@@ -16,5 +16,16 @@ PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License along
 with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
 
+var AAJSMemFileLoadNotifications = {
+    _handlers : [],
+    add : function (handler) {
+        AAJSMemFileLoadNotifications._handlers.push (handler);
+    },
+    notify : function () {
+        var i = 0;
+        for (i = 0; i < AAJSMemFileLoadNotifications._handlers.length; i++)
+    	    AAJSMemFileLoadNotifications._handlers[i].apply(this, arguments);
+    }
+};
+
 var AAJS = (function () {
-    
