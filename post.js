@@ -750,6 +750,10 @@ with this program. If not, see <https://www.gnu.org/licenses/agpl.html>. */
             PrecessEcliptic : function (L, B, JD0, JD) {
                 __ZN13CAAPrecession15PrecessEclipticEdddd(0, L, B, JD0, JD);
                 return { "X" : HEAPF64[0], "Y" : HEAPF64[1] };
+            },
+            PrecessEquatorial : function (L, B, JD0, JD) {
+                __ZN13CAAPrecession17PrecessEquatorialEdddd(0, L, B, JD0, JD);
+                return { "X" : HEAPF64[0], "Y" : HEAPF64[1] };
             }
         },
         

@@ -25,4 +25,4 @@ set FILES=%A:"=%
 
 set FILES_NOTEST=%FILES:AATest.cpp=%
 
-em++ --pre-js "%~dp0\pre.js" --post-js "%~dp0\post.js" -s LINKABLE=1 -s EXPORT_ALL=1 -s NO_FILESYSTEM=1 -s ASSERTIONS=0 %FILES_NOTEST% %*
+em++ --pre-js "%~dp0\pre.js" --post-js "%~dp0\post.js" -s LINKABLE=1 -s EXPORT_ALL=1 -s NO_FILESYSTEM=1 -s INLINING_LIMIT=1 -fno-rtti -fno-exceptions -s ASSERTIONS=0 %FILES_NOTEST% %*
